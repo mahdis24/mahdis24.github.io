@@ -91,6 +91,7 @@
         --radius-sm: 14px;
         --shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
         --socials-bg: white;
+        --border-width: 2px;
       }
 
       :root[data-theme='light'] {
@@ -107,6 +108,7 @@
         --accent-ink: #fff;
         --shadow: 0 24px 70px rgba(18, 30, 25, 0.1);
         --socials-bg: transparent;
+        --border-width: 3px;
       }
 
       * {
@@ -784,6 +786,10 @@
         width: 100%;
       }
 
+      .border-accent {
+        border: var(--border-width) solid var(--accent);
+      }
+
       @media (prefers-reduced-motion: reduce) {
         html {
           scroll-behavior: auto;
@@ -914,7 +920,8 @@
               src="https://mahdis24.github.io/assets/avatar.jpg"
               alt="avatar"
               width="42"
-              style="border-radius: 9px" />
+              style="border-radius: 9px"
+              class="border-accent" />
             <!-- <span class="brand-mark">M</span> -->
             <span class="brand-name">Mahdi Salek</span>
           </a>
@@ -1299,7 +1306,8 @@
             </div>
             <img
               src="https://mahdis24.github.io/assets/avatar.jpg"
-              alt="Mahdi Salek Avatar" />
+              alt="Mahdi Salek Avatar"
+              class="border-accent" />
           </div>
         </div>
       </section>
