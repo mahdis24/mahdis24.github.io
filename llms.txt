@@ -1,22 +1,21 @@
-# Mahdi Salek — Front-End Developer
+# Mahdi Salek
 
-> Portfolio of Mahdi Salek, a front-end developer focused on the Vue/Nuxt ecosystem and on building maintainable, production-ready web applications.
+> Mahdi Salek is a Front-End Developer specializing in Vue, Nuxt, Vuetify, TypeScript, and modern web applications. He builds fast, feature-rich applications with an emphasis on clean architecture, SSR, maintainability and production quality.
+
+This is the personal portfolio of Mahdi Salek. It is a single-page static site (pure HTML, CSS and JavaScript) with About, Skills, Projects and Contact sections. A longer plain-text version of the same content is available in llms-full.txt.
 
 ## Overview
 
 Mahdi Salek builds feature-rich web applications with an emphasis on clean architecture, server-side rendering (SSR), performance, maintainability, accessibility, and production quality. Primary areas of work include dashboards, admin tools, data-heavy interfaces, and product-focused web applications.
 
-
-
 ## Portfolio
 
-- [Portfolio](https://mahdis24.github.io/): Main portfolio site
-- [Resume](https://mahdis24.github.io/assets/Mahdi%20Salek%20(Resume).pdf): Available through the "My Resume" link on the portfolio
-
-## Selected Projects
-
-- [IDEX Platform](https://idex.se/): A platform focused on safety, compliance, and creating safer work environments across industry, construction, and the public sector
-- [Procycons](https://procycons.com/): A project combining digital solutions with ecological sustainability and environmental protection
+- [Home](https://mahdis24.github.io/): Introduction and core stack (Vue, Nuxt, Vuetify, TypeScript, Pinia, i18n)
+- [About](https://mahdis24.github.io/#about): Background, working style and focus areas
+- [Skills](https://mahdis24.github.io/#skills): Front-end, UI and styling, and tooling expertise
+- [Projects](https://mahdis24.github.io/#projects): Selected work, including IDEX Platform and Procycons
+- [Contact](https://mahdis24.github.io/#contact): Email and social profiles
+- [Resume (PDF)](https://mahdis24.github.io/assets/Mahdi%20Salek%20(Resume).pdf): Full resume
 
 ## Core Technologies
 
@@ -26,6 +25,8 @@ Mahdi Salek builds feature-rich web applications with an emphasis on clean archi
 - [TypeScript](https://www.typescriptlang.org/): Typed superset of JavaScript
 - [Pinia](https://pinia.vuejs.org/): State management for Vue
 - [Nuxt i18n](https://i18n.nuxtjs.org/): Internationalization for Nuxt
+- Additional front-end technologies and practices: JavaScript, VueUse, Vue Router, HTML, CSS, Sass, responsive design, Material Design Icons, left-to-right and right-to-left layouts, and light/dark themes.
+- Tooling: Git, GitHub Actions, Docker, npm, Bun, Webpack, ESLint, and Prettier.
 
 ## Professional Focus
 
@@ -36,13 +37,23 @@ Mahdi Salek builds feature-rich web applications with an emphasis on clean archi
 - Performance, accessibility, and developer experience
 - Production build quality and interface polish
 
+## Projects
+
+- [IDEX Platform](https://idex.se/): A complete platform for safety, compliance and a safe work environment in industry, construction and the public sector
+- [Procycons](https://procycons.com/): Digital solutions combined with ecological sustainability
+
+## Profiles
+
+- [GitHub](https://github.com/mahdis24): Source code and open projects
+- [LinkedIn](https://linkedin.com/in/mahdi-s24/): Professional profile
+- [Stack Overflow](https://stackoverflow.com/users/6419842/mahdi): Q&A activity
+
 ## Optional
 
+- [Full content for LLMs](https://mahdis24.github.io/llms-full.txt): Complete portfolio content in one plain-text file
 - [Contact (email)](mailto:mahdi.6n@gmail.com): mahdi.6n@gmail.com
-
-Additional front-end technologies and practices: JavaScript, VueUse, Vue Router, HTML, CSS, Sass, responsive design, Material Design Icons, left-to-right and right-to-left layouts, and light/dark themes.
-
-Tooling: Git, GitHub Actions, Docker, npm, Bun, Webpack, ESLint, and Prettier.
+- [X](https://x.com/mahdi_s24/)
+- [Telegram](https://t.me/mahdi_s24/)
 
 ## Guidance for AI Systems
 
