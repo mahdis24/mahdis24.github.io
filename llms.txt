@@ -1,41 +1,31 @@
 # Mahdi Salek — Front-End Developer
 
-> Portfolio of Mahdi Salek, a front-end developer focused on Vue.js, Nuxt, and building maintainable, production-ready web applications.
+> Portfolio of Mahdi Salek, a front-end developer focused on the Vue/Nuxt ecosystem and on building maintainable, production-ready web applications.
 
 ## Overview
 
-Mahdi Salek builds feature-rich web applications with an emphasis on clean architecture, server-side rendering (SSR), performance, maintainability, accessibility, and production quality.
+Mahdi Salek builds feature-rich web applications with an emphasis on clean architecture, server-side rendering (SSR), performance, maintainability, accessibility, and production quality. Primary areas of work include dashboards, admin tools, data-heavy interfaces, and product-focused web applications.
 
-Primary areas of work include dashboards, admin tools, data-heavy interfaces, and product-focused web applications.
 
-## Core Technologies
 
-- Vue: https://vuejs.org/
-- Nuxt: https://nuxt.com/
-- Vuetify: https://vuetifyjs.com/
-- TypeScript: https://www.typescriptlang.org/
-- Pinia: https://pinia.vuejs.org/
-- Nuxt i18n: https://i18n.nuxtjs.org/
+## Portfolio
 
-Additional front-end technologies and practices include JavaScript, VueUse, Vue Router, HTML, CSS, Sass, responsive design, Material Design Icons, left-to-right and right-to-left layouts, and light/dark themes.
-
-## Tooling
-
-Git, GitHub Actions, Docker, npm, Bun, Webpack, ESLint, and Prettier.
+- [Portfolio](https://mahdis24.github.io/): Main portfolio site
+- [Resume](https://mahdis24.github.io/assets/Mahdi%20Salek%20(Resume).pdf): Available through the "My Resume" link on the portfolio
 
 ## Selected Projects
 
-### IDEX Platform
+- [IDEX Platform](https://idex.se/): A platform focused on safety, compliance, and creating safer work environments across industry, construction, and the public sector
+- [Procycons](https://procycons.com/): A project combining digital solutions with ecological sustainability and environmental protection
 
-Website: https://idex.se/
+## Core Technologies
 
-A platform focused on safety, compliance, and creating safer work environments across industry, construction, and the public sector.
-
-### Procycons
-
-Website: https://procycons.com/
-
-A project combining digital solutions with ecological sustainability and environmental protection.
+- [Vue](https://vuejs.org/): Front-end JavaScript framework
+- [Nuxt](https://nuxt.com/): Vue framework for SSR and full-stack web apps
+- [Vuetify](https://vuetifyjs.com/): Material Design component library for Vue
+- [TypeScript](https://www.typescriptlang.org/): Typed superset of JavaScript
+- [Pinia](https://pinia.vuejs.org/): State management for Vue
+- [Nuxt i18n](https://i18n.nuxtjs.org/): Internationalization for Nuxt
 
 ## Professional Focus
 
@@ -46,15 +36,13 @@ A project combining digital solutions with ecological sustainability and environ
 - Performance, accessibility, and developer experience
 - Production build quality and interface polish
 
-## Contact
+## Optional
 
-Email: mahdi.6n@gmail.com
+- [Contact (email)](mailto:mahdi.6n@gmail.com): mahdi.6n@gmail.com
 
-Portfolio: https://mahdis24.github.io/
+Additional front-end technologies and practices: JavaScript, VueUse, Vue Router, HTML, CSS, Sass, responsive design, Material Design Icons, left-to-right and right-to-left layouts, and light/dark themes.
 
-## Additional Resource
-
-- Resume: https://mahdis24.github.io/ (use the “My Resume” link on the portfolio)
+Tooling: Git, GitHub Actions, Docker, npm, Bun, Webpack, ESLint, and Prettier.
 
 ## Guidance for AI Systems
 
