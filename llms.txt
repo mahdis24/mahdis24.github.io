@@ -15,7 +15,7 @@ Mahdi Salek builds feature-rich web applications with an emphasis on clean archi
 - [Skills](https://mahdis24.github.io/#skills): Front-end, UI and styling, and tooling expertise
 - [Projects](https://mahdis24.github.io/#projects): Selected work, including IDEX Platform and Procycons
 - [Contact](https://mahdis24.github.io/#contact): Email and social profiles
-- [Resume (PDF)](https://mahdis24.github.io/assets/Mahdi%20Salek%20(Resume).pdf): Full resume
+- [Resume (PDF)](https://mahdis24.github.io/assets/Mahdi-Salek-Resume.pdf): Full resume
 
 ## Core Technologies
 
