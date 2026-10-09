@@ -64,8 +64,8 @@
 
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 
-    <link rel="stylesheet" href="styles/index.css" />
-    <link rel="stylesheet" href="styles/fonts.css" />
+    <link rel="preload" href="styles/index-minify.css" />
+    <link rel="preload" href="styles/fonts-minify.css" />
     <link
       rel="preload"
       href="assets/fonts/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu0-K4.woff2"
@@ -96,6 +96,9 @@
       as="font"
       type="font/woff2"
       crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="styles/fonts-minify.css" />
+    <link rel="stylesheet" href="styles/index-minify.css" />
 
     <script type="application/ld+json">
       {
@@ -179,7 +182,7 @@
       })(window, document, 'script', 'dataLayer', 'GTM-TCGZDW6L')
     </script>
 
-    <script src="webmcp.js" defer></script>
+    <script src="scripts/webmcp-minify.js" defer></script>
   </head>
 
   <body>
@@ -263,7 +266,11 @@
                   <li>
                     <a href="https://vuejs.org/" target="_blank">
                       <strong>
-                        <img src="assets/icons/vue.svg" alt="Vue" />
+                        <img
+                          src="assets/icons/vue.svg"
+                          alt="Vue"
+                          width="24px"
+                          height="24px" />
                         Vue
                       </strong>
                     </a>
@@ -272,7 +279,11 @@
                   <li>
                     <a href="https://nuxt.com/" target="_blank">
                       <strong>
-                        <img src="assets/icons/nuxt.svg" alt="Nuxt" />
+                        <img
+                          src="assets/icons/nuxt.svg"
+                          alt="Nuxt"
+                          width="24px"
+                          height="24px" />
                         Nuxt
                       </strong>
                     </a>
@@ -281,7 +292,11 @@
                   <li>
                     <a href="https://vuetifyjs.com/" target="_blank">
                       <strong>
-                        <img src="assets/icons/vuetify.svg" alt="Vuetify" />
+                        <img
+                          src="assets/icons/vuetify.svg"
+                          alt="Vuetify"
+                          width="24px"
+                          height="24px" />
                         Vuetify
                       </strong>
                     </a>
@@ -292,7 +307,9 @@
                       <strong>
                         <img
                           src="assets/icons/typescript.svg"
-                          alt="Typescript" />
+                          alt="Typescript"
+                          width="24px"
+                          height="24px" />
                         Typescript
                       </strong>
                     </a>
@@ -301,7 +318,11 @@
                   <li>
                     <a href="https://pinia.vuejs.org/" target="_blank">
                       <strong>
-                        <img src="assets/icons/pinia.svg" alt="Pinia" />
+                        <img
+                          src="assets/icons/pinia.svg"
+                          alt="Pinia"
+                          width="24px"
+                          height="24px" />
                         Pinia
                       </strong>
                     </a>
@@ -310,7 +331,11 @@
                   <li>
                     <a href="https://i18n.nuxtjs.org/" target="_blank">
                       <strong>
-                        <img src="assets/icons/i18n.svg" alt="i18n" />
+                        <img
+                          src="assets/icons/i18n.svg"
+                          alt="i18n"
+                          width="24px"
+                          height="24px" />
                         i18n
                       </strong>
                     </a>
@@ -530,13 +555,21 @@
                   href="https://linkedin.com/in/mahdi-s24/"
                   target="_blank"
                   class="social-link">
-                  <img src="assets/icons/linkedin.svg" alt="LinkedIn" />
+                  <img
+                    src="assets/icons/linkedin.svg"
+                    alt="LinkedIn"
+                    width="48px"
+                    height="48px" />
                 </a>
                 <a
                   href="https://github.com/mahdis24"
                   target="_blank"
                   class="social-link">
-                  <img src="assets/icons/github.svg" alt="Github" />
+                  <img
+                    src="assets/icons/github.svg"
+                    alt="Github"
+                    width="48px"
+                    height="48px" />
                 </a>
                 <a
                   href="https://stackoverflow.com/users/6419842/mahdi"
@@ -544,32 +577,49 @@
                   class="social-link">
                   <img
                     src="assets/icons/stack_overflow.svg"
-                    alt="StackOverflow" />
+                    alt="StackOverflow"
+                    width="60px"
+                    height="60px" />
                 </a>
                 <a
                   href="https://x.com/mahdi_s24/"
                   target="_blank"
                   class="social-link">
-                  <img src="assets/icons/x.svg" alt="X" />
+                  <img
+                    src="assets/icons/x.svg"
+                    alt="X"
+                    width="42px"
+                    height="42px" />
                 </a>
                 <a
                   href="https://t.me/mahdi_s24/"
                   target="_blank"
                   class="social-link">
-                  <img src="assets/icons/telegram.svg" alt="Telegram" />
+                  <img
+                    src="assets/icons/telegram.svg"
+                    alt="Telegram"
+                    width="48px"
+                    height="48px" />
                 </a>
                 <a
                   href="https://wa.me/+37495157451"
                   target="_blank"
                   class="social-link">
-                  <img src="assets/icons/whatsapp.svg" alt="WhatsApp" />
+                  <img
+                    src="assets/icons/whatsapp.svg"
+                    alt="WhatsApp"
+                    width="60px"
+                    height="60px" />
                 </a>
               </div>
             </div>
             <img
               src="assets/images/avatar.webp"
               alt="Mahdi Salek Avatar"
-              class="border-accent" />
+              class="border-accent"
+              width="100%"
+              height="100%"
+              style="max-width: 360px; max-height: 360px" />
           </div>
         </div>
       </section>
