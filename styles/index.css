@@ -11,6 +11,7 @@
   --line: rgba(255, 255, 255, 0.09);
   --accent: #00d684;
   --accent-2: #8ab4ff;
+  --bt-primary: #089e6a;
   --accent-ink: #06140e;
   --max: 1500px;
   --radius: 22px;
@@ -29,8 +30,9 @@
   --muted: #68717b;
   --muted-strong: #3d464f;
   --line: rgba(16, 21, 26, 0.1);
-  --accent: #119b6b;
+  --accent: #089e6a;
   --accent-2: #477fe1;
+  --bt-primary: #047857;
   --accent-ink: #fff;
   --shadow: 0 24px 70px rgba(18, 30, 25, 0.1);
   --socials-bg: transparent;
@@ -325,7 +327,7 @@ h2 {
   border-color: var(--accent);
 }
 .btn.primary {
-  background: var(--accent);
+  background: var(--bt-primary);
   color: var(--accent-ink);
   border-color: var(--accent);
 }
@@ -388,9 +390,7 @@ h2 {
 }
 
 .stack-list li strong img {
-  width: 24px;
   margin-right: 6px;
-  aspect-ratio: 1;
 }
 
 .stack-list span:last-child {
@@ -640,8 +640,6 @@ h2 {
 }
 
 .contact-box > img {
-  width: 100%;
-  max-width: 360px;
   border-radius: 100%;
   transform: scaleX(-1);
 }
@@ -693,19 +691,12 @@ footer {
 .socials {
   background: var(--socials-bg);
   margin-top: 36px;
-  width: fit-content;
   border-radius: 12px;
-}
-
-.social-link {
-  width: 42px;
-  height: 42px;
-  margin: 18px;
-  display: inline-block;
-}
-
-.social-link img {
-  width: 100%;
+  display: flex;
+  gap: 36px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .border-accent {
