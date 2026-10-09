@@ -1,0 +1,89 @@
+# Mahdi Salek
+
+> Mahdi Salek is a Front-End Developer specializing in Vue, Nuxt, Vuetify, TypeScript, and modern web applications. He builds fast, feature-rich applications with an emphasis on clean architecture, SSR, maintainability and production quality.
+
+Website: https://mahdis24.github.io/
+Role: Front-End Developer
+Focus: Vue and Nuxt ecosystem
+Status: Open to new opportunities and interesting projects
+
+## Introduction
+
+Building web products that feel intentional.
+
+Mahdi is a developer focused on the Vue and Nuxt ecosystem. He builds fast, feature-rich applications with an emphasis on clean architecture, SSR, maintainability and production quality.
+
+### Core stack
+
+- Vue (https://vuejs.org/): UI framework
+- Nuxt (https://nuxt.com/): Application framework
+- Vuetify (https://vuetifyjs.com/): Component systems
+- TypeScript (https://typescriptlang.org/): Type-safe development
+- Pinia (https://pinia.vuejs.org/): State management
+- i18n (https://i18n.nuxtjs.org/): Internationalization
+
+## About
+
+From complex requirements to clean interfaces.
+
+Product-minded development across dashboards, admin tools, data-heavy views and feature-rich web applications.
+
+Mahdi enjoys turning complex requirements into clean, maintainable interfaces. His day-to-day work covers feature-rich applications, dashboards, admin tools, data-heavy views and everything in between.
+
+He cares about performance, accessibility and developer experience, from structuring stores and composables sensibly to shipping reliable production builds.
+
+### Key facts
+
+- Vue, Nuxt & Vuetify: Primary focus, including SSR
+- Architecture: Clean, scalable and maintainable
+- Production-minded: Tooling, builds and polish
+
+Resume (PDF): https://mahdis24.github.io/assets/Mahdi%20Salek%20(Resume).pdf
+
+## Skills
+
+A practical stack for shipping real products.
+
+### Front-end
+
+Vue, Nuxt, Vuetify, TypeScript, JavaScript, Pinia, i18n, VueUse, Vue Router
+
+### UI and styling
+
+HTML, CSS, Sass, responsive design, Material Design Icons, LTR/RTL support, light/dark themes
+
+### Tooling
+
+Git, GitHub Actions, Docker, npm, bun, Webpack, ESLint, Prettier
+
+## Projects
+
+Projects with a focus on product quality.
+
+### IDEX Platform
+
+URL: https://idex.se/
+
+A complete platform for safety, compliance and a safe work environment in industry, construction and the public sector.
+
+### Procycons
+
+URL: https://procycons.com/
+
+Combines digital solutions with ecological sustainability, creating a bridge between technology and environmental protection.
+
+## Contact
+
+For collaboration, freelance work or a technical conversation, get in touch.
+
+- Email: mahdi.6n@gmail.com
+- LinkedIn: https://linkedin.com/in/mahdi-s24/
+- GitHub: https://github.com/mahdis24
+- Stack Overflow: https://stackoverflow.com/users/6419842/mahdi
+- X: https://x.com/mahdi_s24/
+- Telegram: https://t.me/mahdi_s24/
+- WhatsApp: https://wa.me/+37495157451
+
+## About this site
+
+The site is built with pure HTML, CSS and JavaScript. It supports light and dark themes. Structured data (schema.org Person) and WebMCP tools are provided for machine readers.
