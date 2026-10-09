@@ -32,7 +32,7 @@
     <meta property="og:locale" content="en_US" />
     <meta
       property="og:image"
-      content="https://mahdis24.github.io/assets/og-image.jpg" />
+      content="https://mahdis24.github.io/assets/images/og-image.jpg" />
     <meta
       property="og:image:alt"
       content="Mahdi Salek - Front-End Developer | Vue & Nuxt" />
@@ -46,7 +46,7 @@
       content="Front-End Developer specializing in Vue, Nuxt, Vuetify, TypeScript, and modern web applications." />
     <meta
       name="twitter:image"
-      content="https://mahdis24.github.io/assets/og-image.jpg" />
+      content="https://mahdis24.github.io/assets/images/og-image.jpg" />
     <meta
       name="twitter:image:alt"
       content="Mahdi Salek - Front-End Developer | Vue & Nuxt" />
@@ -62,16 +62,10 @@
       name="google-site-verification"
       content="TNC4nLN74mTSYd5a5JVjuD2TmZVUFDx3FO8w-emzNMk" />
 
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="https://mahdis24.github.io/assets/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-      rel="stylesheet" />
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/fonts.css" />
 
     <script type="application/ld+json">
       {
@@ -123,826 +117,14 @@
         f.parentNode.insertBefore(j, f)
       })(window, document, 'script', 'dataLayer', 'GTM-TCGZDW6L')
     </script>
-
-    <style>
-      :root {
-        --bg: #080a0f;
-        --bg-soft: #0d1017;
-        --surface: rgba(255, 255, 255, 0.045);
-        --surface-strong: rgba(255, 255, 255, 0.07);
-        --text: #f4f6fb;
-        --muted: #9299aa;
-        --muted-strong: #b8bfcc;
-        --line: rgba(255, 255, 255, 0.09);
-        --accent: #00d684;
-        --accent-2: #8ab4ff;
-        --accent-ink: #06140e;
-        --max: 1500px;
-        --radius: 22px;
-        --radius-sm: 14px;
-        --shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
-        --socials-bg: white;
-        --border-width: 2px;
-      }
-
-      :root[data-theme='light'] {
-        --bg: #f5f7f5;
-        --bg-soft: #edf1ee;
-        --surface: rgba(255, 255, 255, 0.76);
-        --surface-strong: #fff;
-        --text: #10151a;
-        --muted: #68717b;
-        --muted-strong: #3d464f;
-        --line: rgba(16, 21, 26, 0.1);
-        --accent: #119b6b;
-        --accent-2: #477fe1;
-        --accent-ink: #fff;
-        --shadow: 0 24px 70px rgba(18, 30, 25, 0.1);
-        --socials-bg: transparent;
-        --border-width: 3px;
-      }
-
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-
-      html {
-        scroll-behavior: smooth;
-        scroll-padding-top: 90px;
-      }
-
-      body {
-        min-height: 100vh;
-        font-family: 'DM Sans', system-ui, sans-serif;
-        color: var(--text);
-        background:
-          radial-gradient(
-            circle at 80% 0%,
-            rgba(98, 230, 180, 0.08),
-            transparent 28rem
-          ),
-          radial-gradient(
-            circle at 10% 25%,
-            rgba(138, 180, 255, 0.055),
-            transparent 24rem
-          ),
-          var(--bg);
-        line-height: 1.65;
-        -webkit-font-smoothing: antialiased;
-        overflow-x: hidden;
-      }
-
-      body::before {
-        content: '';
-        position: fixed;
-        inset: 0;
-        pointer-events: none;
-        opacity: 0.025;
-        background-image:
-          linear-gradient(rgba(255, 255, 255, 0.5) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(255, 255, 255, 0.5) 1px, transparent 1px);
-        background-size: 42px 42px;
-        mask-image: linear-gradient(to bottom, black, transparent 70%);
-      }
-
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-      button {
-        font: inherit;
-      }
-      .wrap {
-        width: min(var(--max), calc(100% - 40px));
-        margin-inline: auto;
-      }
-      .mono {
-        font-family: 'Space Grotesk', monospace;
-      }
-
-      /* Navigation */
-      header {
-        position: fixed;
-        inset: 0 0 auto;
-        z-index: 100;
-        padding-top: 14px;
-        pointer-events: none;
-      }
-
-      nav {
-        height: 64px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 8px 0 18px;
-        border: 1px solid var(--line);
-        border-radius: 18px;
-        background: color-mix(in srgb, var(--bg) 78%, transparent);
-        backdrop-filter: blur(20px);
-        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
-        pointer-events: auto;
-      }
-
-      .brand {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        font-family: 'Space Grotesk', sans-serif;
-        font-weight: 700;
-        letter-spacing: -0.04em;
-      }
-
-      .brand-mark {
-        width: 30px;
-        height: 30px;
-        display: grid;
-        place-items: center;
-        border-radius: 9px;
-        color: var(--accent-ink);
-        background: var(--accent);
-        font-size: 0.82rem;
-      }
-
-      .brand-name {
-        font-size: 1.02rem;
-      }
-
-      .nav-links {
-        display: flex;
-        align-items: center;
-        gap: 4px;
-      }
-
-      .nav-links a {
-        padding: 9px 13px;
-        border-radius: 10px;
-        color: var(--muted);
-        font-size: 0.88rem;
-        transition: 0.2s ease;
-      }
-
-      .nav-links a:hover {
-        color: var(--text);
-        background: var(--surface);
-      }
-
-      .theme-btn {
-        width: 40px;
-        height: 40px;
-        margin-left: 4px;
-        display: grid;
-        place-items: center;
-        border: 1px solid var(--line);
-        border-radius: 12px;
-        color: var(--text);
-        background: var(--surface);
-        cursor: pointer;
-        transition: 0.2s ease;
-      }
-
-      .theme-btn:hover {
-        border-color: var(--accent);
-        transform: translateY(-1px);
-      }
-
-      /* Global */
-      .section {
-        position: relative;
-        padding: 112px 0;
-        border-top: 1px solid var(--line);
-      }
-
-      .section-label {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        margin-bottom: 18px;
-        color: var(--accent);
-        font:
-          600 0.76rem/1 'Space Grotesk',
-          sans-serif;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-      }
-
-      .section-label::before {
-        content: '';
-        width: 26px;
-        height: 1px;
-        background: currentColor;
-      }
-
-      .section-heading {
-        max-width: 1200px;
-        margin-bottom: 48px;
-      }
-
-      .section-heading h2 {
-        margin-top: 18px;
-        margin-bottom: 36px;
-      }
-
-      h2 {
-        font:
-          600 clamp(2rem, 4vw, 3.2rem)/1.05 'Space Grotesk',
-          sans-serif;
-        letter-spacing: -0.055em;
-      }
-
-      .section-intro {
-        margin-top: 16px;
-        color: var(--muted);
-        font-size: 1.03rem;
-      }
-
-      /* Hero */
-      .hero {
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        padding: 120px 0 100px;
-      }
-
-      .hero-grid {
-        display: grid;
-        grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
-        gap: 80px;
-        align-items: center;
-      }
-
-      .status {
-        width: fit-content;
-        display: inline-flex;
-        align-items: center;
-        gap: 9px;
-        padding: 7px 12px;
-        border: 1px solid var(--line);
-        border-radius: 999px;
-        color: var(--muted-strong);
-        background: var(--surface);
-        font-size: 0.78rem;
-        margin-bottom: 25px;
-      }
-
-      .status-dot {
-        width: 7px;
-        height: 7px;
-        border-radius: 50%;
-        background: var(--accent);
-        box-shadow: 0 0 0 5px rgba(98, 230, 180, 0.1);
-      }
-
-      .hero h1 {
-        max-width: 900px;
-        font:
-          600 clamp(3.4rem, 8.3vw, 7.5rem)/0.91 'Space Grotesk',
-          sans-serif;
-        letter-spacing: -0.075em;
-        line-height: 1.05em;
-      }
-
-      .hero h1 .accent {
-        color: var(--accent);
-        display: inline-block;
-      }
-
-      .color-accent {
-        color: var(--accent);
-      }
-
-      .hero-copy {
-        max-width: 720px;
-        margin-top: 28px;
-        color: var(--muted);
-        font-size: clamp(1rem, 1.5vw, 1.16rem);
-      }
-
-      .hero-actions {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-top: 34px;
-      }
-
-      .btn {
-        min-height: 46px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: 9px;
-        padding: 0 18px;
-        border: 1px solid var(--line);
-        border-radius: 12px;
-        color: var(--text);
-        background: var(--surface);
-        font-size: 0.9rem;
-        font-weight: 600;
-        transition:
-          transform 0.2s ease,
-          border-color 0.2s ease,
-          background 0.2s ease;
-      }
-
-      .btn:hover {
-        transform: translateY(-2px);
-        border-color: var(--accent);
-      }
-      .btn.primary {
-        background: var(--accent);
-        color: var(--accent-ink);
-        border-color: var(--accent);
-      }
-
-      .hero-side {
-        padding-bottom: 5px;
-      }
-
-      .hero-card {
-        padding: 24px;
-        border: 1px solid var(--line);
-        border-radius: var(--radius);
-        background: linear-gradient(
-          145deg,
-          var(--surface-strong),
-          var(--surface)
-        );
-        box-shadow: var(--shadow);
-      }
-
-      .hero-card-top {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 30px;
-      }
-
-      .hero-card-label {
-        color: var(--muted);
-        font-size: 0.76rem;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-      }
-
-      .hero-card-index {
-        color: var(--accent);
-        font:
-          600 0.8rem 'Space Grotesk',
-          sans-serif;
-      }
-
-      .stack-list {
-        list-style: none;
-        display: grid;
-        gap: 2px;
-      }
-
-      .stack-list li {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 12px 0;
-        border-bottom: 1px solid var(--line);
-        font-size: 0.92rem;
-      }
-
-      .stack-list li:last-child {
-        border-bottom: unset;
-      }
-
-      .stack-list li strong {
-        display: flex;
-        align-items: center;
-      }
-
-      .stack-list li strong img {
-        width: 24px;
-        margin-right: 6px;
-        aspect-ratio: 1;
-      }
-
-      .stack-list span:last-child {
-        color: var(--muted);
-        font-size: 0.78rem;
-      }
-
-      /* About */
-      .about-grid {
-        display: grid;
-        grid-template-columns: 1.2fr 0.8fr;
-        gap: 80px;
-      }
-
-      .about-copy {
-        color: var(--muted);
-        font-size: 1.05rem;
-      }
-
-      .about-copy p + p {
-        margin-top: 18px;
-      }
-
-      .facts {
-        display: grid;
-        gap: 10px;
-      }
-
-      .fact {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 20px;
-        padding: 17px 18px;
-        border: 1px solid var(--line);
-        border-radius: var(--radius-sm);
-        background: var(--surface);
-      }
-
-      .fact strong {
-        font-size: 0.9rem;
-      }
-      .fact span {
-        color: var(--muted);
-        font-size: 0.8rem;
-        text-align: right;
-      }
-
-      /* Skills */
-      .skills-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 36px;
-      }
-
-      .skill-card {
-        min-height: 230px;
-        padding: 22px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        border: 1px solid var(--line);
-        border-radius: var(--radius);
-        background: var(--surface);
-        transition:
-          transform 0.25s ease,
-          border-color 0.25s ease,
-          background 0.25s ease;
-      }
-
-      .skill-card:hover {
-        transform: translateY(-5px);
-        border-color: rgba(98, 230, 180, 0.35);
-        background: var(--surface-strong);
-      }
-
-      .skill-number {
-        color: var(--muted);
-        font:
-          0.74rem 'Space Grotesk',
-          sans-serif;
-      }
-
-      .skill-card h3 {
-        margin-top: auto;
-        font:
-          600 1.15rem 'Space Grotesk',
-          sans-serif;
-      }
-
-      .tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 7px;
-        margin-top: 16px;
-      }
-
-      .tag {
-        padding: 5px 9px;
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        color: var(--muted-strong);
-        font-size: 0.74rem;
-        background: rgba(255, 255, 255, 0.02);
-      }
-
-      /* Projects */
-      .projects {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 36px;
-      }
-
-      .project {
-        min-height: 340px;
-        position: relative;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        padding: 28px;
-        border: 1px solid var(--line);
-        border-radius: var(--radius);
-        background:
-          radial-gradient(
-            circle at 100% 0%,
-            rgba(98, 230, 180, 0.09),
-            transparent 18rem
-          ),
-          var(--surface);
-        transition:
-          transform 0.25s ease,
-          border-color 0.25s ease;
-      }
-
-      .project:nth-child(2) {
-        background:
-          radial-gradient(
-            circle at 100% 0%,
-            rgba(138, 180, 255, 0.1),
-            transparent 18rem
-          ),
-          var(--surface);
-      }
-
-      .project:nth-child(3) {
-        background:
-          radial-gradient(
-            circle at 100% 0%,
-            rgba(98, 230, 180, 0.07),
-            transparent 18rem
-          ),
-          var(--surface);
-      }
-
-      .project:hover {
-        transform: translateY(-6px);
-        border-color: rgba(98, 230, 180, 0.4);
-      }
-
-      .project-meta {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 70px;
-        color: var(--muted);
-        font:
-          0.74rem 'Space Grotesk',
-          sans-serif;
-      }
-
-      .project-no {
-        color: var(--accent);
-      }
-
-      .project h3 {
-        font:
-          600 clamp(1.5rem, 3vw, 2.1rem)/1.1 'Space Grotesk',
-          sans-serif;
-        letter-spacing: -0.045em;
-        margin-bottom: 24px;
-      }
-
-      .project p {
-        max-width: 530px;
-        margin-top: 12px;
-        color: var(--muted);
-        font-size: 0.9rem;
-      }
-
-      .project-bottom {
-        margin-top: auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: end;
-        gap: 20px;
-      }
-
-      .project-arrow {
-        width: 42px;
-        height: 42px;
-        flex: 0 0 auto;
-        display: grid;
-        place-items: center;
-        border: 1px solid var(--line);
-        border-radius: 50%;
-        transition: 0.2s ease;
-      }
-
-      .project:hover .project-arrow {
-        background: var(--accent);
-        color: var(--accent-ink);
-        border-color: var(--accent);
-        transform: rotate(-45deg);
-      }
-
-      /* Contact */
-      .contact {
-        padding-bottom: 100px;
-      }
-
-      .contact-box {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        position: relative;
-        overflow: hidden;
-        padding: clamp(34px, 7vw, 76px);
-        border: 1px solid var(--line);
-        border-radius: 28px;
-        background:
-          radial-gradient(
-            circle at 90% 10%,
-            rgba(98, 230, 180, 0.14),
-            transparent 24rem
-          ),
-          linear-gradient(135deg, var(--surface-strong), var(--surface));
-      }
-
-      .contact-box h2 {
-        max-width: 600px;
-      }
-
-      .contact-box p {
-        max-width: 600px;
-        margin: 18px 0 30px;
-        color: var(--muted);
-      }
-
-      .contact-box > img {
-        width: 100%;
-        max-width: 360px;
-        border-radius: 100%;
-        transform: scaleX(-1);
-      }
-
-      .email-link {
-        display: inline-flex;
-        align-items: center;
-        gap: 12px;
-        padding-bottom: 7px;
-        border-bottom: 1px solid var(--accent);
-        color: var(--text);
-        font:
-          600 clamp(1rem, 2.2vw, 1.35rem) 'Space Grotesk',
-          sans-serif;
-      }
-
-      .email-link span {
-        color: var(--accent);
-      }
-
-      footer {
-        padding: 0 0 32px;
-        color: var(--muted);
-        font-size: 0.76rem;
-      }
-
-      .footer-inner {
-        display: flex;
-        justify-content: space-between;
-        gap: 20px;
-        padding-top: 22px;
-        border-top: 1px solid var(--line);
-      }
-
-      /* Motion */
-      .reveal {
-        opacity: 0;
-        transform: translateY(22px);
-        transition:
-          opacity 0.7s ease,
-          transform 0.7s ease;
-      }
-
-      .reveal.in {
-        opacity: 1;
-        transform: none;
-      }
-
-      .socials {
-        background: var(--socials-bg);
-        margin-top: 36px;
-        width: fit-content;
-        border-radius: 12px;
-      }
-
-      .social-link {
-        width: 42px;
-        height: 42px;
-        margin: 18px;
-        display: inline-block;
-      }
-
-      .social-link img {
-        width: 100%;
-      }
-
-      .border-accent {
-        border: var(--border-width) solid var(--accent);
-      }
-
-      @media (prefers-reduced-motion: reduce) {
-        html {
-          scroll-behavior: auto;
-        }
-        *,
-        *::before,
-        *::after {
-          animation: none !important;
-          transition: none !important;
-        }
-        .reveal {
-          opacity: 1;
-          transform: none;
-        }
-      }
-
-      /* Responsive */
-      @media (max-width: 900px) {
-        .hero-grid,
-        .about-grid {
-          grid-template-columns: 1fr;
-          gap: 45px;
-        }
-
-        .hero-side {
-          margin-top: 30px;
-        }
-
-        .skills-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
-
-        .contact-box {
-          flex-direction: column;
-        }
-
-        .contact-box > img {
-          margin-top: 60px;
-          transform: scaleX(1);
-        }
-
-        .socials {
-          text-align: center;
-        }
-      }
-
-      @media (max-width: 700px) {
-        .wrap {
-          width: min(var(--max), calc(100% - 28px));
-        }
-        header {
-          padding-top: 8px;
-        }
-        nav {
-          height: 58px;
-          padding-left: 12px;
-        }
-        .nav-links a {
-          display: none;
-        }
-        .hero {
-          min-height: auto;
-          padding: 130px 0 100px;
-        }
-        .hero h1 {
-          font-size: clamp(3.2rem, 14vw, 5rem);
-        }
-        .hero-grid {
-          gap: 35px;
-        }
-        .section {
-          padding: 60px 0;
-        }
-        .section-heading {
-          margin-bottom: 36px;
-        }
-        .skills-grid,
-        .projects {
-          grid-template-columns: 1fr;
-        }
-        .skill-card {
-          min-height: 190px;
-        }
-        .project {
-          min-height: 310px;
-        }
-        .project-meta {
-          margin-bottom: 55px;
-        }
-        .footer-inner {
-          flex-direction: column;
-        }
-      }
-    </style>
   </head>
 
   <body>
     <noscript>
       <iframe
         src="https://www.googletagmanager.com/ns.html?id=GTM-TCGZDW6L"
-        height="0"
         width="0"
+        height="0"
         style="display: none; visibility: hidden"></iframe>
     </noscript>
 
@@ -951,7 +133,7 @@
         <nav aria-label="Primary navigation">
           <a class="brand" href="#top" aria-label="home">
             <img
-              src="https://mahdis24.github.io/assets/avatar.jpg"
+              src="assets/images/avatar.jpg"
               alt="avatar"
               width="42"
               style="border-radius: 9px"
@@ -1015,9 +197,7 @@
                   <li>
                     <a href="https://vuejs.org/" target="_blank">
                       <strong>
-                        <img
-                          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
-                          alt="Vue" />
+                        <img src="assets/icons/vue.svg" alt="Vue" />
                         Vue
                       </strong>
                     </a>
@@ -1026,9 +206,7 @@
                   <li>
                     <a href="https://nuxt.com/" target="_blank">
                       <strong>
-                        <img
-                          src="https://nuxt.com/assets/design-kit/icon-green.svg"
-                          alt="Nuxt" />
+                        <img src="assets/icons/nuxt.svg" alt="Nuxt" />
                         Nuxt
                       </strong>
                     </a>
@@ -1037,9 +215,7 @@
                   <li>
                     <a href="https://vuetifyjs.com/" target="_blank">
                       <strong>
-                        <img
-                          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuetify/vuetify-original.svg"
-                          alt="Vuetify" />
+                        <img src="assets/icons/vuetify.svg" alt="Vuetify" />
                         Vuetify
                       </strong>
                     </a>
@@ -1049,7 +225,7 @@
                     <a href="https://typescriptlang.org/" target="_blank">
                       <strong>
                         <img
-                          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                          src="assets/icons/typescript.svg"
                           alt="Typescript" />
                         Typescript
                       </strong>
@@ -1059,9 +235,7 @@
                   <li>
                     <a href="https://pinia.vuejs.org/" target="_blank">
                       <strong>
-                        <img
-                          src="https://pinia.vuejs.org/logo.svg"
-                          alt="Pinia" />
+                        <img src="assets/icons/pinia.svg" alt="Pinia" />
                         Pinia
                       </strong>
                     </a>
@@ -1070,9 +244,7 @@
                   <li>
                     <a href="https://i18n.nuxtjs.org/" target="_blank">
                       <strong>
-                        <img
-                          src="https://vue-i18n.intlify.dev/vue-i18n-logo.svg"
-                          alt="i18n" />
+                        <img src="assets/icons/i18n.svg" alt="i18n" />
                         i18n
                       </strong>
                     </a>
@@ -1117,7 +289,7 @@
               <br />
 
               <a
-                href="https://mahdis24.github.io/assets/Mahdi Salek (Resume).pdf"
+                href="assets/Mahdi Salek (Resume).pdf"
                 target="_blank"
                 download
                 class="btn primary">
@@ -1292,54 +464,44 @@
                   href="https://linkedin.com/in/mahdi-s24/"
                   target="_blank"
                   class="social-link">
-                  <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg"
-                    alt="LinkedIn" />
+                  <img src="assets/icons/linkedin.svg" alt="LinkedIn" />
                 </a>
                 <a
                   href="https://github.com/mahdis24"
                   target="_blank"
                   class="social-link">
-                  <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
-                    alt="Github" />
+                  <img src="assets/icons/github.svg" alt="Github" />
                 </a>
                 <a
                   href="https://stackoverflow.com/users/6419842/mahdi"
                   target="_blank"
                   class="social-link">
                   <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Stack_Overflow_icon.svg"
+                    src="assets/icons/stack_overflow.svg"
                     alt="StackOverflow" />
                 </a>
                 <a
                   href="https://x.com/mahdi_s24/"
                   target="_blank"
                   class="social-link">
-                  <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/5/53/X_logo_2023_original.svg"
-                    alt="X" />
+                  <img src="assets/icons/x.svg" alt="X" />
                 </a>
                 <a
                   href="https://t.me/mahdi_s24/"
                   target="_blank"
                   class="social-link">
-                  <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg"
-                    alt="Telegram" />
+                  <img src="assets/icons/telegram.svg" alt="Telegram" />
                 </a>
                 <a
                   href="https://wa.me/+37495157451"
                   target="_blank"
                   class="social-link">
-                  <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-                    alt="WhatsApp" />
+                  <img src="assets/icons/whatsapp.svg" alt="WhatsApp" />
                 </a>
               </div>
             </div>
             <img
-              src="https://mahdis24.github.io/assets/avatar.jpg"
+              src="assets/images/avatar.jpg"
               alt="Mahdi Salek Avatar"
               class="border-accent" />
           </div>
