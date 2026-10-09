@@ -742,6 +742,8 @@ footer {
   .contact-box > img {
     margin-top: 60px;
     transform: scaleX(1);
+    width: 100%;
+    height: 100%;
   }
 
   .socials {
