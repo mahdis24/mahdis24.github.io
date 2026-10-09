@@ -13,7 +13,6 @@
       content="Mahdi Salek is a Front-End Developer specializing in Vue, Nuxt, Vuetify, TypeScript, and modern web applications." />
 
     <meta name="author" content="Mahdi Salek" />
-    <meta name="language" content="en" />
     <meta name="robots" content="index, follow" />
 
     <link rel="canonical" href="https://mahdis24.github.io/" />
@@ -32,7 +31,9 @@
     <meta property="og:locale" content="en_US" />
     <meta
       property="og:image"
-      content="https://mahdis24.github.io/assets/images/og-image.webp" />
+      content="https://mahdis24.github.io/assets/images/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta
       property="og:image:alt"
       content="Mahdi Salek - Front-End Developer | Vue & Nuxt" />
@@ -46,7 +47,7 @@
       content="Front-End Developer specializing in Vue, Nuxt, Vuetify, TypeScript, and modern web applications." />
     <meta
       name="twitter:image"
-      content="https://mahdis24.github.io/assets/images/og-image.webp" />
+      content="https://mahdis24.github.io/assets/images/og-image.jpg" />
     <meta
       name="twitter:image:alt"
       content="Mahdi Salek - Front-End Developer | Vue & Nuxt" />
@@ -64,67 +65,11 @@
 
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 
-    <link rel="preload" href="styles/index-minify.css" />
-    <link rel="preload" href="styles/fonts-minify.css" />
-    <link
-      rel="preload"
-      href="assets/fonts/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu0-K4.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin="anonymous" />
-    <link
-      rel="preload"
-      href="assets/fonts/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu6-K6h9Q.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin="anonymous" />
-    <link
-      rel="preload"
-      href="assets/fonts/V8mDoQDjQSkFtoMM3T6r8E7mPb54C-s0.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin="anonymous" />
-    <link
-      rel="preload"
-      href="assets/fonts/V8mDoQDjQSkFtoMM3T6r8E7mPb94C-s0.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin="anonymous" />
-    <link
-      rel="preload"
-      href="assets/fonts/V8mDoQDjQSkFtoMM3T6r8E7mPbF4Cw.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin="anonymous" />
+    <link rel="preload" href="styles/index-minify.css" as="style" />
+    <link rel="preload" href="styles/fonts-minify.css" as="style" />
 
-    <link rel="stylesheet" href="styles/fonts-minify.css" />
-    <link rel="stylesheet" href="styles/index-minify.css" />
-
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Mahdi Salek",
-        "url": "https://mahdis24.github.io/",
-        "image": "https://mahdis24.github.io/assets/images/avatar.webp",
-        "jobTitle": "Front-End Developer",
-        "sameAs": [
-          "https://github.com/mahdis24",
-          "https://www.linkedin.com/in/mahdi-s24/"
-        ],
-        "knowsAbout": [
-          "Vue.js",
-          "Nuxt.js",
-          "Vuetify.js",
-          "TypeScript",
-          "JavaScript",
-          "Pinia",
-          "i18n",
-          "Frontend Development",
-          "Web Application Development"
-        ]
-      }
-    </script>
+    <link rel="stylesheet" href="styles/fonts-minify.css" as="style" />
+    <link rel="stylesheet" href="styles/index-minify.css" as="style" />
 
     <script type="application/ld+json">
       {
@@ -153,6 +98,17 @@
             "Web Application Development"
           ]
         }
+      }
+    </script>
+
+    <script>
+      const { dataset } = document.documentElement
+
+      try {
+        var t = localStorage.getItem('theme')
+        dataset.theme = t === 'light' ? 'light' : 'dark'
+      } catch (e) {
+        dataset.theme = 'dark'
       }
     </script>
 
@@ -199,7 +155,7 @@
         <nav aria-label="Primary navigation">
           <a class="brand" href="#top" aria-label="home">
             <img
-              src="assets/images/avatar.webp"
+              src="assets/images/avatar-appbar.webp"
               alt="avatar"
               width="42"
               height="42"
@@ -264,78 +220,90 @@
                 </div>
                 <ul class="stack-list">
                   <li>
-                    <a href="https://vuejs.org/" target="_blank">
+                    <a href="https://vuejs.org/" target="_blank" rel="noopener">
                       <strong>
                         <img
                           src="assets/icons/vue.svg"
                           alt="Vue"
-                          width="24px"
-                          height="24px" />
+                          width="24"
+                          height="24" />
                         Vue
                       </strong>
                     </a>
                     <span>UI framework</span>
                   </li>
                   <li>
-                    <a href="https://nuxt.com/" target="_blank">
+                    <a href="https://nuxt.com/" target="_blank" rel="noopener">
                       <strong>
                         <img
                           src="assets/icons/nuxt.svg"
                           alt="Nuxt"
-                          width="24px"
-                          height="24px" />
+                          width="24"
+                          height="24" />
                         Nuxt
                       </strong>
                     </a>
                     <span>Application framework</span>
                   </li>
                   <li>
-                    <a href="https://vuetifyjs.com/" target="_blank">
+                    <a
+                      href="https://vuetifyjs.com/"
+                      target="_blank"
+                      rel="noopener">
                       <strong>
                         <img
                           src="assets/icons/vuetify.svg"
                           alt="Vuetify"
-                          width="24px"
-                          height="24px" />
+                          width="24"
+                          height="24" />
                         Vuetify
                       </strong>
                     </a>
                     <span>Component systems</span>
                   </li>
                   <li>
-                    <a href="https://typescriptlang.org/" target="_blank">
+                    <a
+                      href="https://typescriptlang.org/"
+                      target="_blank"
+                      rel="noopener">
                       <strong>
                         <img
                           src="assets/icons/typescript.svg"
                           alt="Typescript"
-                          width="24px"
-                          height="24px" />
+                          width="24"
+                          height="24" />
                         Typescript
                       </strong>
                     </a>
                     <span>Type-safe development</span>
                   </li>
                   <li>
-                    <a href="https://pinia.vuejs.org/" target="_blank">
+                    <a
+                      href="https://pinia.vuejs.org/"
+                      target="_blank"
+                      rel="noopener">
                       <strong>
                         <img
                           src="assets/icons/pinia.svg"
                           alt="Pinia"
-                          width="24px"
-                          height="24px" />
+                          width="24"
+                          height="24" />
                         Pinia
                       </strong>
                     </a>
                     <span>State management</span>
                   </li>
                   <li>
-                    <a href="https://i18n.nuxtjs.org/" target="_blank">
+                    <a
+                      href="https://i18n.nuxtjs.org/"
+                      target="_blank"
+                      rel="noopener">
                       <strong>
                         <img
                           src="assets/icons/i18n.svg"
                           alt="i18n"
-                          width="24px"
-                          height="24px" />
+                          width="24"
+                          height="24" />
                         i18n
                       </strong>
                     </a>
@@ -380,7 +348,7 @@
               <br />
 
               <a
-                href="assets/Mahdi Salek (Resume).pdf"
+                href="assets/Mahdi-Salek-Resume.pdf"
                 target="_blank"
                 download
                 class="btn primary">
@@ -554,72 +522,78 @@
                 <a
                   href="https://linkedin.com/in/mahdi-s24/"
                   target="_blank"
+                  rel="noopener"
                   class="social-link">
                   <img
                     src="assets/icons/linkedin.svg"
                     alt="LinkedIn"
-                    width="48px"
-                    height="48px" />
+                    width="48"
+                    height="48" />
                 </a>
                 <a
                   href="https://github.com/mahdis24"
                   target="_blank"
+                  rel="noopener"
                   class="social-link">
                   <img
                     src="assets/icons/github.svg"
                     alt="Github"
-                    width="48px"
-                    height="48px" />
+                    width="48"
+                    height="48" />
                 </a>
                 <a
                   href="https://stackoverflow.com/users/6419842/mahdi"
                   target="_blank"
+                  rel="noopener"
                   class="social-link">
                   <img
                     src="assets/icons/stack_overflow.svg"
                     alt="StackOverflow"
-                    width="60px"
-                    height="60px" />
+                    width="60"
+                    height="60" />
                 </a>
                 <a
                   href="https://x.com/mahdi_s24/"
                   target="_blank"
+                  rel="noopener"
                   class="social-link">
                   <img
                     src="assets/icons/x.svg"
                     alt="X"
-                    width="42px"
-                    height="42px" />
+                    width="42"
+                    height="42" />
                 </a>
                 <a
                   href="https://t.me/mahdi_s24/"
                   target="_blank"
+                  rel="noopener"
                   class="social-link">
                   <img
                     src="assets/icons/telegram.svg"
                     alt="Telegram"
-                    width="48px"
-                    height="48px" />
+                    width="48"
+                    height="48" />
                 </a>
                 <a
-                  href="https://wa.me/+37495157451"
+                  href="https://wa.me/37495157451"
                   target="_blank"
+                  rel="noopener"
                   class="social-link">
                   <img
                     src="assets/icons/whatsapp.svg"
                     alt="WhatsApp"
-                    width="48px"
-                    height="48px" />
+                    width="48"
+                    height="48" />
                 </a>
               </div>
             </div>
             <img
               src="assets/images/avatar.webp"
               alt="Mahdi Salek Avatar"
-              class="border-accent"
-              width="100%"
-              height="100%"
-              style="max-width: 360px; max-height: 360px" />
+              width="360"
+              height="360"
+              loading="lazy"
+              class="border-accent" />
           </div>
         </div>
       </section>
@@ -633,19 +607,9 @@
     </footer>
 
     <script>
-      const { dataset } = document.documentElement
       const themeBtn = document.getElementById('themeBtn')
 
-      dataset.theme = 'dark'
-
       document.getElementById('year').textContent = new Date().getFullYear()
-
-      try {
-        const savedTheme = localStorage.getItem('theme')
-        if (savedTheme === 'light' || savedTheme === 'dark') {
-          dataset.theme = savedTheme
-        }
-      } catch {}
 
       themeBtn.addEventListener('click', () => {
         dataset.theme = dataset.theme === 'dark' ? 'light' : 'dark'
