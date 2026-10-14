@@ -38,7 +38,7 @@ He cares about performance, accessibility and developer experience, from structu
 - Architecture: Clean, scalable and maintainable
 - Production-minded: Tooling, builds and polish
 
-Resume (PDF): https://mahdis24.github.io/assets/Mahdi-Salek-Resume.pdf
+Resume (PDF): https://mahdis24.github.io/assets/Mahdi_Salek_Front_End_Developer.pdf
 
 ## Skills
 

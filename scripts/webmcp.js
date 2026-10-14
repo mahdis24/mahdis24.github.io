@@ -87,7 +87,7 @@
     skills: '#skills',
     projects: '#projects',
     contact: '#contact',
-    resume: 'assets/Mahdi-Salek-Resume.pdf'
+    resume: 'assets/Mahdi_Salek_Front_End_Developer.pdf'
   }
 
   const reply = (value) => ({
