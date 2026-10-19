@@ -2,7 +2,7 @@
 
 > Mahdi Salek is a Front-End Developer specializing in Vue, Nuxt, Vuetify, TypeScript, and modern web applications. He builds fast, feature-rich applications with an emphasis on clean architecture, SSR, maintainability and production quality.
 
-Website: https://mahdis24.github.io/
+Website: https://mahdis24.tech/
 Role: Front-End Developer
 Focus: Vue and Nuxt ecosystem
 Status: Open to new opportunities and interesting projects
@@ -38,7 +38,7 @@ He cares about performance, accessibility and developer experience, from structu
 - Architecture: Clean, scalable and maintainable
 - Production-minded: Tooling, builds and polish
 
-Resume (PDF): https://mahdis24.github.io/assets/Mahdi_Salek_Front_End_Developer.pdf
+Resume (PDF): https://mahdis24.tech/assets/Mahdi_Salek_Front_End_Developer.pdf
 
 ## Skills
 

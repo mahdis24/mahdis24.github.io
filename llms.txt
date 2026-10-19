@@ -10,12 +10,12 @@ Mahdi Salek builds feature-rich web applications with an emphasis on clean archi
 
 ## Portfolio
 
-- [Home](https://mahdis24.github.io/): Introduction and core stack (Vue, Nuxt, Vuetify, TypeScript, Pinia, i18n)
-- [About](https://mahdis24.github.io/#about): Background, working style and focus areas
-- [Skills](https://mahdis24.github.io/#skills): Front-end, UI and styling, and tooling expertise
-- [Projects](https://mahdis24.github.io/#projects): Selected work, including IDEX Platform and Procycons
-- [Contact](https://mahdis24.github.io/#contact): Email and social profiles
-- [Resume (PDF)](https://mahdis24.github.io/assets/Mahdi_Salek_Front_End_Developer.pdf): Full resume
+- [Home](https://mahdis24.tech/): Introduction and core stack (Vue, Nuxt, Vuetify, TypeScript, Pinia, i18n)
+- [About](https://mahdis24.tech/#about): Background, working style and focus areas
+- [Skills](https://mahdis24.tech/#skills): Front-end, UI and styling, and tooling expertise
+- [Projects](https://mahdis24.tech/#projects): Selected work, including IDEX Platform and Procycons
+- [Contact](https://mahdis24.tech/#contact): Email and social profiles
+- [Resume (PDF)](https://mahdis24.tech/assets/Mahdi_Salek_Front_End_Developer.pdf): Full resume
 
 ## Core Technologies
 
@@ -50,7 +50,7 @@ Mahdi Salek builds feature-rich web applications with an emphasis on clean archi
 
 ## Optional
 
-- [Full content for LLMs](https://mahdis24.github.io/llms-full.txt): Complete portfolio content in one plain-text file
+- [Full content for LLMs](https://mahdis24.tech/llms-full.txt): Complete portfolio content in one plain-text file
 - [Contact (email)](mailto:mahdi.6n@gmail.com): mahdi.6n@gmail.com
 - [X](https://x.com/mahdi_s24/)
 - [Telegram](https://t.me/mahdi_s24/)

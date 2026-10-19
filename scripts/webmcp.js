@@ -1,12 +1,12 @@
 /** @format */
 
-// WebMCP tools for https://mahdis24.github.io/
+// WebMCP tools for https://mahdis24.tech/
 // Include in index.html with: <script src="webmcp.js" defer></script>
 
 ;(function () {
   if (!('modelContext' in navigator)) return
 
-  const SITE_URL = 'https://mahdis24.github.io/'
+  const SITE_URL = 'https://mahdis24.tech/'
 
   const OVERVIEW = {
     name: 'Mahdi Salek',
