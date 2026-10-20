@@ -104,11 +104,32 @@
     <script>
       const { dataset } = document.documentElement
 
+      function changeTheme(theme) {
+        if (theme) {
+          dataset.theme = theme
+        } else {
+          dataset.theme = dataset.theme === 'dark' ? 'light' : 'dark'
+        }
+
+        try {
+          localStorage.setItem('theme', dataset.theme)
+        } catch {}
+      }
+
       try {
-        var t = localStorage.getItem('theme')
-        dataset.theme = t === 'light' ? 'light' : 'dark'
+        let theme = localStorage.getItem('theme')
+
+        if (!theme) {
+          throw new Error('No Saved Theme Mode!')
+        }
+
+        if (!['light', 'dark'].includes(theme)) {
+          throw new Error('Wrong Theme Mode!')
+        }
+
+        changeTheme(theme)
       } catch (e) {
-        dataset.theme = 'dark'
+        changeTheme('dark')
       }
     </script>
 
@@ -586,20 +607,58 @@
         <span>© <span id="year"></span> Mahdi Salek</span>
         <span>Built with Pure HTML, CSS & JavaScript</span>
       </div>
+      <section id="badges">
+        <div class="wrap">
+          <a
+            href="https://websitelaunches.com/site/mahdis24.tech"
+            target="_blank"
+            rel="noopener">
+            <img
+              id="luncherBadge"
+              src="https://websitelaunches.com/badge/mahdis24.tech.svg"
+              alt="Established online - Public launch record"
+              width="255"
+              height="55"
+              loading="lazy" />
+          </a>
+
+          <a
+            href="https://websitelaunches.com/site/mahdis24.tech"
+            target="_blank"
+            rel="noopener">
+            <div id="wcb" class="carbonbadge"></div>
+          </a>
+        </div>
+      </section>
     </footer>
 
     <script>
       const themeBtn = document.getElementById('themeBtn')
+      const wcbBadge = document.getElementById('wcb')
+      const luncherBadge = document.getElementById('luncherBadge')
 
       document.getElementById('year').textContent = new Date().getFullYear()
 
       themeBtn.addEventListener('click', () => {
-        dataset.theme = dataset.theme === 'dark' ? 'light' : 'dark'
-
-        try {
-          localStorage.setItem('theme', dataset.theme)
-        } catch {}
+        changeTheme()
+        changeBadgeTheme()
       })
+
+      document.addEventListener('DOMContentLoaded', changeBadgeTheme())
+
+      function changeBadgeTheme() {
+        let luncherBadgeSrc = new URL(luncherBadge.src)
+
+        if (dataset.theme === 'dark') {
+          wcbBadge.classList.add('wcb-d')
+          luncherBadgeSrc.searchParams.set('theme', 'dark')
+        } else {
+          wcbBadge.classList.remove('wcb-d')
+          luncherBadgeSrc.searchParams.delete('theme')
+        }
+
+        luncherBadge.src = luncherBadgeSrc.toString()
+      }
 
       const observer = new IntersectionObserver(
         (entries) => {
@@ -617,5 +676,9 @@
         .querySelectorAll('.reveal')
         .forEach((element) => observer.observe(element))
     </script>
+
+    <script
+      src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js"
+      defer></script>
   </body>
 </html>
