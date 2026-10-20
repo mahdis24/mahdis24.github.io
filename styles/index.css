@@ -707,6 +707,19 @@ footer {
   border: var(--border-width) solid var(--accent);
 }
 
+section#badges > div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+  margin-top: 60px;
+}
+
+section#badges a {
+  display: inline-flex;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
