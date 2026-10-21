@@ -613,32 +613,40 @@
       </div>
       <section id="badges">
         <div class="wrap">
-          <a
-            href="https://websitelaunches.com/site/mahdis24.tech"
-            target="_blank"
-            rel="noopener">
-            <img
-              id="luncherBadge"
-              src="https://websitelaunches.com/badge/mahdis24.tech.svg"
-              alt="Established online - Public launch record"
-              width="255"
-              height="55"
-              loading="lazy" />
-          </a>
+          <div>
+            <a
+              href="https://websitelaunches.com/site/mahdis24.tech"
+              target="_blank"
+              rel="noopener">
+              <img
+                id="luncherBadge"
+                src="https://websitelaunches.com/badge/mahdis24.tech.svg"
+                alt="Established online - Public launch record"
+                width="292.82"
+                height="63.16"
+                loading="lazy" />
+            </a>
+          </div>
 
-          <a
-            href="https://www.websitecarbon.com/website/mahdis24-tech/"
-            target="_blank"
-            rel="noopener">
-            <div id="wcb" class="carbonbadge"></div>
-          </a>
+          <div class="eco-badge-wrapper">
+            <a
+              href="https://www.websitecarbon.com/website/mahdis24-tech/"
+              target="_blank"
+              rel="noopener"
+              class="eco-badge">
+              <span class="eco-dot"></span>
+              <span class="eco-metric">0.04g of CO<sub>2</sub>/view</span>
+              <span class="eco-divider">|</span>
+              <span class="eco-brand">Website Carbon</span>
+            </a>
+            <span class="eco-subtext">Cleaner than 92% of pages tested</span>
+          </div>
         </div>
       </section>
     </footer>
 
     <script>
       const themeBtn = document.getElementById('themeBtn')
-      const wcbBadge = document.getElementById('wcb')
       const luncherBadge = document.getElementById('luncherBadge')
 
       document.getElementById('year').textContent = new Date().getFullYear()
@@ -654,11 +662,9 @@
         let luncherBadgeSrc = new URL(luncherBadge.src)
 
         if (dataset.theme === 'dark') {
-          wcbBadge.classList.add('wcb-d')
-          luncherBadgeSrc.searchParams.set('theme', 'dark')
-        } else {
-          wcbBadge.classList.remove('wcb-d')
           luncherBadgeSrc.searchParams.delete('theme')
+        } else {
+          luncherBadgeSrc.searchParams.set('theme', 'dark')
         }
 
         luncherBadge.src = luncherBadgeSrc.toString()
@@ -680,9 +686,5 @@
         .querySelectorAll('.reveal')
         .forEach((element) => observer.observe(element))
     </script>
-
-    <script
-      src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js"
-      defer></script>
   </body>
 </html>
