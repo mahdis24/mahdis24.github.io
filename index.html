@@ -65,8 +65,19 @@
 
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 
-    <link rel="preload" href="styles/index-minify.css" as="style" />
-    <link rel="preload" href="styles/fonts-minify.css" as="style" />
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <link
+      rel="preload"
+      href="assets/fonts/dm-sans.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin />
+    <link
+      rel="preload"
+      href="assets/fonts/space-grotesk.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin />
 
     <link rel="stylesheet" href="styles/fonts-minify.css" />
     <link rel="stylesheet" href="styles/index-minify.css" />
@@ -106,35 +117,32 @@
     </script>
 
     <script>
-      const { dataset } = document.documentElement
-
       function changeTheme(theme) {
-        if (theme) {
-          dataset.theme = theme
-        } else {
-          dataset.theme = dataset.theme === 'dark' ? 'light' : 'dark'
-        }
+        const root = document.documentElement
+
+        root.dataset.theme =
+          theme || (root.dataset.theme === 'dark' ? 'light' : 'dark')
 
         try {
-          localStorage.setItem('theme', dataset.theme)
+          localStorage.setItem('theme', root.dataset.theme)
         } catch {}
       }
 
-      try {
-        let theme = localStorage.getItem('theme')
-
-        if (!theme) {
-          throw new Error('No Saved Theme Mode!')
+      ;(() => {
+        try {
+          const saved = localStorage.getItem('theme')
+          const prefersDark = window.matchMedia(
+            '(prefers-color-scheme: dark)'
+          ).matches
+          const theme =
+            saved === 'light' || saved === 'dark' ? saved
+            : prefersDark ? 'dark'
+            : 'light'
+          changeTheme(theme)
+        } catch (e) {
+          changeTheme('dark')
         }
-
-        if (!['light', 'dark'].includes(theme)) {
-          throw new Error('Wrong Theme Mode!')
-        }
-
-        changeTheme(theme)
-      } catch (e) {
-        changeTheme('dark')
-      }
+      })()
     </script>
 
     <script>
@@ -166,7 +174,7 @@
     <header>
       <div class="wrap">
         <nav aria-label="Primary navigation">
-          <a class="brand" href="#top" aria-label="home">
+          <a class="brand" href="#top" aria-label="Return to top">
             <img
               src="assets/images/avatar-appbar.webp"
               alt="avatar"
@@ -174,7 +182,6 @@
               height="42"
               decoding="async"
               fetchpriority="high"
-              style="border-radius: 9px"
               class="border-accent" />
             <!-- <span class="brand-mark">M</span> -->
             <span class="brand-name">Mahdi Salek</span>
@@ -469,7 +476,11 @@
           </div>
 
           <div class="projects">
-            <a class="project reveal" href="https://idex.se/" target="_blank">
+            <a
+              class="project reveal"
+              href="https://idex.se/"
+              target="_blank"
+              rel="noopener">
               <div class="project-meta">
                 <span class="project-no">PROJECT 01</span>
               </div>
@@ -482,7 +493,6 @@
                 </p>
               </div>
               <div class="project-bottom">
-                <div class="tags"></div>
                 <span class="project-arrow" aria-hidden="true">↗</span>
               </div>
             </a>
@@ -491,7 +501,7 @@
               class="project reveal"
               href="https://procycons.com/"
               target="_blank"
-              rel="nofollow noopener">
+              rel="noopener noreferrer nofollow">
               <div class="project-meta">
                 <span class="project-no">PROJECT 02</span>
               </div>
@@ -504,7 +514,6 @@
                 </p>
               </div>
               <div class="project-bottom">
-                <div class="tags"></div>
                 <span class="project-arrow" aria-hidden="true">↗</span>
               </div>
             </a>
@@ -622,8 +631,8 @@
                 id="luncherBadge"
                 src="https://websitelaunches.com/badge/mahdis24.tech.svg"
                 alt="Established online - Public launch record"
-                width="292.82"
-                height="63.16"
+                width="293"
+                height="63"
                 loading="lazy" />
             </a>
           </div>
@@ -651,24 +660,37 @@
 
       document.getElementById('year').textContent = new Date().getFullYear()
 
+      function syncThemeState() {
+        const isDark = document.documentElement.dataset.theme === 'dark'
+        if (themeBtn) {
+          themeBtn.setAttribute('aria-pressed', isDark ? 'true' : 'false')
+          themeBtn.setAttribute(
+            'aria-label',
+            `Switch to ${isDark ? 'light' : 'dark'} theme`
+          )
+        }
+        changeBadgeTheme()
+      }
+
       themeBtn.addEventListener('click', () => {
         changeTheme()
-        changeBadgeTheme()
+        syncThemeState()
       })
 
-      document.addEventListener('DOMContentLoaded', changeBadgeTheme())
-
       function changeBadgeTheme() {
-        let luncherBadgeSrc = new URL(luncherBadge.src)
-
-        if (dataset.theme === 'dark') {
-          luncherBadgeSrc.searchParams.delete('theme')
-        } else {
-          luncherBadgeSrc.searchParams.set('theme', 'dark')
-        }
-
-        luncherBadge.src = luncherBadgeSrc.toString()
+        if (!luncherBadge) return
+        try {
+          const luncherBadgeSrc = new URL(luncherBadge.src)
+          if (document.documentElement.dataset.theme === 'dark') {
+            luncherBadgeSrc.searchParams.delete('theme')
+          } else {
+            luncherBadgeSrc.searchParams.set('theme', 'dark')
+          }
+          luncherBadge.src = luncherBadgeSrc.toString()
+        } catch {}
       }
+
+      syncThemeState()
 
       const observer = new IntersectionObserver(
         (entries) => {
