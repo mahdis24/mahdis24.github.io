@@ -2,7 +2,6 @@
 
 :root {
   --bg: #080a0f;
-  --bg-soft: #0d1017;
   --surface: rgba(255, 255, 255, 0.045);
   --surface-strong: rgba(255, 255, 255, 0.07);
   --text: #f4f6fb;
@@ -19,17 +18,15 @@
   --border-width: 2px;
   --social-gradient: rgba(255, 255, 255, 0.18);
   --wcb-bg-primary: #f8fafc;
-  --wcb-bg-secondary: #0f172a;
   --wcb-text-primary: #0f172a;
-  --wcb-text-secondary: #ffffff;
   --wcb-border: #cbd5e1;
-  --wcb-accent: #10b981;
   --wcb-subtext: #64748b;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --font-display: 'Space Grotesk', sans-serif;
 }
 
 :root[data-theme='light'] {
   --bg: #f5f7f5;
-  --bg-soft: #edf1ee;
   --surface: rgba(255, 255, 255, 0.76);
   --surface-strong: #fff;
   --text: #10151a;
@@ -43,9 +40,7 @@
   --border-width: 3px;
   --social-gradient: white;
   --wcb-bg-primary: #1e293b;
-  --wcb-bg-secondary: #10b981;
   --wcb-text-primary: #f8fafc;
-  --wcb-text-secondary: #090d16;
   --wcb-border: #334155;
   --wcb-subtext: #94a3b8;
 }
@@ -63,19 +58,11 @@ html {
 
 body {
   min-height: 100vh;
-  font-family: 'DM Sans', system-ui, sans-serif;
+  font-family: var(--font-body);
   color: var(--text);
   background:
-    radial-gradient(
-      circle at 80% 0%,
-      rgba(98, 230, 180, 0.08),
-      transparent 28rem
-    ),
-    radial-gradient(
-      circle at 10% 25%,
-      rgba(138, 180, 255, 0.055),
-      transparent 24rem
-    ),
+    radial-gradient(circle at 80% 0%, rgba(98, 230, 180, 0.08), transparent 28rem),
+    radial-gradient(circle at 10% 25%, rgba(138, 180, 255, 0.055), transparent 24rem),
     var(--bg);
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
@@ -99,15 +86,25 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
 button {
   font: inherit;
 }
+
 .wrap {
   width: min(var(--max), calc(100% - 40px));
   margin-inline: auto;
 }
-.mono {
-  font-family: 'Space Grotesk', monospace;
+
+h1,
+h2,
+h3,
+.brand,
+.section-label,
+.skill-number,
+.project-meta,
+.email-link {
+  font-family: var(--font-display);
 }
 
 /* Navigation */
@@ -137,20 +134,12 @@ nav {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-family: 'Space Grotesk', sans-serif;
   font-weight: 700;
   letter-spacing: -0.04em;
 }
 
-.brand-mark {
-  width: 30px;
-  height: 30px;
-  display: grid;
-  place-items: center;
+.brand img {
   border-radius: 9px;
-  color: var(--accent-ink);
-  background: var(--accent);
-  font-size: 0.82rem;
 }
 
 .brand-name {
@@ -168,7 +157,7 @@ nav {
   border-radius: 10px;
   color: var(--muted);
   font-size: 0.88rem;
-  transition: 0.2s ease;
+  transition: 0.2s;
 }
 
 .nav-links a:hover {
@@ -187,7 +176,7 @@ nav {
   color: var(--text);
   background: var(--surface);
   cursor: pointer;
-  transition: 0.2s ease;
+  transition: 0.2s;
 }
 
 .theme-btn:hover {
@@ -208,9 +197,9 @@ nav {
   gap: 10px;
   margin-bottom: 18px;
   color: var(--accent);
-  font:
-    600 0.76rem/1 'Space Grotesk',
-    sans-serif;
+  font-weight: 600;
+  font-size: 0.76rem;
+  line-height: 1;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -233,9 +222,9 @@ nav {
 }
 
 h2 {
-  font:
-    600 clamp(2rem, 4vw, 3.2rem)/1.05 'Space Grotesk',
-    sans-serif;
+  font-weight: 600;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.05;
   letter-spacing: -0.055em;
 }
 
@@ -284,11 +273,10 @@ h2 {
 
 .hero h1 {
   max-width: 900px;
-  font:
-    600 clamp(3.4rem, 8.3vw, 7.5rem)/0.91 'Space Grotesk',
-    sans-serif;
+  font-weight: 600;
+  font-size: clamp(3.4rem, 8.3vw, 7.5rem);
   letter-spacing: -0.075em;
-  line-height: 1.05em;
+  line-height: 1.05;
 }
 
 .hero h1 .accent {
@@ -327,16 +315,14 @@ h2 {
   background: var(--surface);
   font-size: 0.9rem;
   font-weight: 600;
-  transition:
-    transform 0.2s ease,
-    border-color 0.2s ease,
-    background 0.2s ease;
+  transition: transform 0.2s, border-color 0.2s, background 0.2s;
 }
 
 .btn:hover {
   transform: translateY(-2px);
   border-color: var(--accent);
 }
+
 .btn.primary {
   background: var(--bt-primary);
   color: var(--accent-ink);
@@ -367,13 +353,6 @@ h2 {
   font-size: 0.76rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-}
-
-.hero-card-index {
-  color: var(--accent);
-  font:
-    600 0.8rem 'Space Grotesk',
-    sans-serif;
 }
 
 .stack-list {
@@ -444,6 +423,7 @@ h2 {
 .fact strong {
   font-size: 0.9rem;
 }
+
 .fact span {
   color: var(--muted);
   font-size: 0.8rem;
@@ -466,10 +446,7 @@ h2 {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--surface);
-  transition:
-    transform 0.25s ease,
-    border-color 0.25s ease,
-    background 0.25s ease;
+  transition: transform 0.25s, border-color 0.25s, background 0.25s;
 }
 
 .skill-card:hover {
@@ -480,16 +457,13 @@ h2 {
 
 .skill-number {
   color: var(--muted);
-  font:
-    0.74rem 'Space Grotesk',
-    sans-serif;
+  font-size: 0.74rem;
 }
 
 .skill-card h3 {
   margin-top: auto;
-  font:
-    600 1.15rem 'Space Grotesk',
-    sans-serif;
+  font-weight: 600;
+  font-size: 1.15rem;
 }
 
 .tags {
@@ -525,34 +499,14 @@ h2 {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background:
-    radial-gradient(
-      circle at 100% 0%,
-      rgba(98, 230, 180, 0.09),
-      transparent 18rem
-    ),
+    radial-gradient(circle at 100% 0%, rgba(98, 230, 180, 0.09), transparent 18rem),
     var(--surface);
-  transition:
-    transform 0.25s ease,
-    border-color 0.25s ease;
+  transition: transform 0.25s, border-color 0.25s;
 }
 
 .project:nth-child(2) {
   background:
-    radial-gradient(
-      circle at 100% 0%,
-      rgba(138, 180, 255, 0.1),
-      transparent 18rem
-    ),
-    var(--surface);
-}
-
-.project:nth-child(3) {
-  background:
-    radial-gradient(
-      circle at 100% 0%,
-      rgba(98, 230, 180, 0.07),
-      transparent 18rem
-    ),
+    radial-gradient(circle at 100% 0%, rgba(138, 180, 255, 0.1), transparent 18rem),
     var(--surface);
 }
 
@@ -567,9 +521,7 @@ h2 {
   align-items: center;
   margin-bottom: 70px;
   color: var(--muted);
-  font:
-    0.74rem 'Space Grotesk',
-    sans-serif;
+  font-size: 0.74rem;
 }
 
 .project-no {
@@ -577,9 +529,9 @@ h2 {
 }
 
 .project h3 {
-  font:
-    600 clamp(1.5rem, 3vw, 2.1rem)/1.1 'Space Grotesk',
-    sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  line-height: 1.1;
   letter-spacing: -0.045em;
   margin-bottom: 24px;
 }
@@ -594,7 +546,7 @@ h2 {
 .project-bottom {
   margin-top: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
   align-items: end;
   gap: 20px;
 }
@@ -607,7 +559,7 @@ h2 {
   place-items: center;
   border: 1px solid var(--line);
   border-radius: 50%;
-  transition: 0.2s ease;
+  transition: 0.2s;
 }
 
 .project:hover .project-arrow {
@@ -632,11 +584,7 @@ h2 {
   border: 1px solid var(--line);
   border-radius: 28px;
   background:
-    radial-gradient(
-      circle at 90% 10%,
-      rgba(98, 230, 180, 0.14),
-      transparent 24rem
-    ),
+    radial-gradient(circle at 90% 10%, rgba(98, 230, 180, 0.14), transparent 24rem),
     linear-gradient(135deg, var(--surface-strong), var(--surface));
 }
 
@@ -662,9 +610,8 @@ h2 {
   padding-bottom: 7px;
   border-bottom: 1px solid var(--accent);
   color: var(--text);
-  font:
-    600 clamp(1.5rem, 2.2vw, 2rem) 'Space Grotesk',
-    sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.5rem, 2.2vw, 2rem);
 }
 
 .email-link span {
@@ -689,9 +636,7 @@ footer {
 .reveal {
   opacity: 0;
   transform: translateY(22px);
-  transition:
-    opacity 0.7s ease,
-    transform 0.7s ease;
+  transition: opacity 0.7s, transform 0.7s;
 }
 
 .reveal.in {
@@ -713,14 +658,23 @@ footer {
 }
 
 .socials a {
-  display: contents;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.socials a:hover {
+  transform: translateY(-2px);
+  opacity: 0.85;
 }
 
 .border-accent {
   border: var(--border-width) solid var(--accent);
 }
 
-section#badges > div {
+#badges .wrap {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -729,11 +683,8 @@ section#badges > div {
   margin-top: 60px;
 }
 
-section#badges > div > div {
+#badges a {
   display: inline-flex;
-}
-section#badges > div > div > a {
-  display: inherit;
 }
 
 .eco-badge-wrapper {
