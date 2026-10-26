@@ -61,8 +61,16 @@ body {
   font-family: var(--font-body);
   color: var(--text);
   background:
-    radial-gradient(circle at 80% 0%, rgba(98, 230, 180, 0.08), transparent 28rem),
-    radial-gradient(circle at 10% 25%, rgba(138, 180, 255, 0.055), transparent 24rem),
+    radial-gradient(
+      circle at 80% 0%,
+      rgba(98, 230, 180, 0.08),
+      transparent 28rem
+    ),
+    radial-gradient(
+      circle at 10% 25%,
+      rgba(138, 180, 255, 0.055),
+      transparent 24rem
+    ),
     var(--bg);
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
@@ -315,7 +323,10 @@ h2 {
   background: var(--surface);
   font-size: 0.9rem;
   font-weight: 600;
-  transition: transform 0.2s, border-color 0.2s, background 0.2s;
+  transition:
+    transform 0.2s,
+    border-color 0.2s,
+    background 0.2s;
 }
 
 .btn:hover {
@@ -446,7 +457,10 @@ h2 {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--surface);
-  transition: transform 0.25s, border-color 0.25s, background 0.25s;
+  transition:
+    transform 0.25s,
+    border-color 0.25s,
+    background 0.25s;
 }
 
 .skill-card:hover {
@@ -499,14 +513,24 @@ h2 {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background:
-    radial-gradient(circle at 100% 0%, rgba(98, 230, 180, 0.09), transparent 18rem),
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(98, 230, 180, 0.09),
+      transparent 18rem
+    ),
     var(--surface);
-  transition: transform 0.25s, border-color 0.25s;
+  transition:
+    transform 0.25s,
+    border-color 0.25s;
 }
 
 .project:nth-child(2) {
   background:
-    radial-gradient(circle at 100% 0%, rgba(138, 180, 255, 0.1), transparent 18rem),
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(138, 180, 255, 0.1),
+      transparent 18rem
+    ),
     var(--surface);
 }
 
@@ -584,7 +608,11 @@ h2 {
   border: 1px solid var(--line);
   border-radius: 28px;
   background:
-    radial-gradient(circle at 90% 10%, rgba(98, 230, 180, 0.14), transparent 24rem),
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(98, 230, 180, 0.14),
+      transparent 24rem
+    ),
     linear-gradient(135deg, var(--surface-strong), var(--surface));
 }
 
@@ -637,7 +665,11 @@ h2 {
   font-size: 0.82rem;
   font-weight: 500;
   cursor: pointer;
-  transition: transform 0.2s, border-color 0.2s, background 0.2s, color 0.2s;
+  transition:
+    transform 0.2s,
+    border-color 0.2s,
+    background 0.2s,
+    color 0.2s;
 }
 
 .copy-email-btn:hover {
@@ -651,7 +683,6 @@ h2 {
   background: rgba(0, 214, 132, 0.12);
   color: var(--accent);
 }
-
 
 footer {
   padding: 0 0 32px;
@@ -671,7 +702,9 @@ footer {
 .reveal {
   opacity: 0;
   transform: translateY(22px);
-  transition: opacity 0.7s, transform 0.7s;
+  transition:
+    opacity 0.7s,
+    transform 0.7s;
 }
 
 .reveal.in {
@@ -697,7 +730,9 @@ footer {
   align-items: center;
   justify-content: center;
   border-radius: 12px;
-  transition: transform 0.2s, opacity 0.2s;
+  transition:
+    transform 0.2s,
+    opacity 0.2s;
 }
 
 .socials a:hover {
@@ -857,5 +892,80 @@ footer {
   }
   .footer-inner {
     flex-direction: column;
+  }
+}
+
+/* PWA Splash Screen */
+#pwa-splash {
+  display: none;
+}
+
+@media all and (display-mode: standalone) {
+  #pwa-splash {
+    display: flex;
+  }
+}
+
+html.pwa-mode #pwa-splash {
+  display: flex;
+}
+
+#pwa-splash {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background-color: var(--bg);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease;
+}
+
+#pwa-splash.splash-hide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.splash-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.splash-logo {
+  width: 84px;
+  height: 84px;
+  border-radius: 22px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+  animation: splashPulse 1.4s ease-in-out infinite alternate;
+}
+
+.splash-spinner {
+  width: 24px;
+  height: 24px;
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: splashSpin 0.7s linear infinite;
+}
+
+@keyframes splashSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes splashPulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.85;
+  }
+  100% {
+    transform: scale(1.05);
+    opacity: 1;
   }
 }
