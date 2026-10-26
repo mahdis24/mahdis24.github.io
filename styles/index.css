@@ -942,7 +942,7 @@ html.pwa-mode #pwa-splash {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 60px;
+  gap: 48px;
 }
 
 .splash-logo {
@@ -954,16 +954,28 @@ html.pwa-mode #pwa-splash {
 }
 
 .splash-spinner {
-  width: 36px;
-  height: 36px;
-  border: 6px solid rgba(255, 255, 255, 0.12);
-  border-top-color: var(--accent);
-  border-radius: 50%;
-  animation: splashSpin 0.7s linear infinite;
+  width: 60px;
+  height: 60px;
+  animation: splashSpin 0.78s linear infinite;
+}
+
+.splash-spinner circle {
+  fill: none;
+  stroke-width: 4px;
+}
+
+.splash-spinner .bg {
+  stroke: rgba(255, 255, 255, 0.12);
+}
+
+.splash-spinner .active {
+  stroke: var(--accent);
+  stroke-linecap: round;
+  stroke-dasharray: 40 150;
 }
 
 @keyframes splashSpin {
-  to {
+  100% {
     transform: rotate(360deg);
   }
 }
