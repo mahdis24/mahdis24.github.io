@@ -853,6 +853,7 @@ img {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  pointer-events: none;
 }
 
 @media (max-width: 700px) {
