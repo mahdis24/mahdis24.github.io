@@ -1,0 +1,13 @@
+/* TEAM */
+  Developer: Mahdi Salek
+  Site: https://mahdis24.tech
+  GitHub: https://github.com/mahdis24
+  LinkedIn: https://linkedin.com/in/mahdi-s24
+  Location: Yerevan, Armenia
+
+/* SITE */
+  Standards: HTML5, CSS3, JavaScript (ES2024), W3C PWA, Schema.org
+  Typography: Space Grotesk, DM Sans
+  Software: Vue, Nuxt, Vuetify, TypeScript
+  Host: GitHub Pages
+  Performance: Carbon neutral / 0.04g CO2 per view
