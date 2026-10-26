@@ -935,21 +935,25 @@
         document.documentElement.classList.add('pwa-mode')
         const splash = document.getElementById('pwa-splash')
         if (splash) {
-          const startTime = performance.now()
+          let hidden = false
           const hideSplash = () => {
-            const elapsed = performance.now() - startTime
-            const delay = Math.max(0, 450 - elapsed)
-            setTimeout(() => {
-              splash.classList.add('splash-hide')
-              setTimeout(() => splash.remove(), 400)
-            }, delay)
+            if (hidden) return
+            hidden = true
+            splash.classList.add('splash-hide')
+            setTimeout(() => splash.remove(), 400)
           }
 
+          // 1. Try to dismiss as soon as the window finishes loading
           if (document.readyState === 'complete') {
-            hideSplash()
+            setTimeout(hideSplash, 200)
           } else {
-            window.addEventListener('load', hideSplash, { once: true })
+            window.addEventListener('load', () => setTimeout(hideSplash, 150), {
+              once: true
+            })
           }
+
+          // 2. Safety Fallback: Never let the splash stay visible longer than 1.2s
+          setTimeout(hideSplash, 1500)
         }
       }
     </script>
