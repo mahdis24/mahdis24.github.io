@@ -64,7 +64,8 @@ self.addEventListener('fetch', (event) => {
   if (
     url.pathname.startsWith('/assets/fonts/') ||
     url.pathname.startsWith('/assets/icons/') ||
-    url.pathname.startsWith('/assets/images/')
+    url.pathname.startsWith('/assets/images/') ||
+    url.pathname.endsWith('.pdf')
   ) {
     event.respondWith(
       caches.match(event.request).then((cachedResponse) => {
@@ -99,18 +100,12 @@ self.addEventListener('fetch', (event) => {
             return networkResponse
           })
           .catch(() => {
-            if (cachedResponse) return cachedResponse
             if (event.request.mode === 'navigate') {
               return caches.match('/', { ignoreSearch: true })
             }
           })
 
-        // Return cached response instantly if available, otherwise wait for network
-        return (
-          cachedResponse ||
-          fetchPromise ||
-          caches.match('/', { ignoreSearch: true })
-        )
+        return cachedResponse || fetchPromise
       })
   )
 })
