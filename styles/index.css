@@ -847,6 +847,14 @@ footer {
   }
 }
 
+img {
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 @media (max-width: 700px) {
   .wrap {
     width: min(var(--max), calc(100% - 28px));
@@ -933,21 +941,21 @@ html.pwa-mode #pwa-splash {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
+  gap: 36px;
 }
 
 .splash-logo {
-  width: 84px;
-  height: 84px;
-  border-radius: 22px;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+  width: 120px;
+  height: 120px;
+  border-radius: 18px;
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.45);
   animation: splashPulse 1.4s ease-in-out infinite alternate;
 }
 
 .splash-spinner {
-  width: 24px;
-  height: 24px;
-  border: 2px solid rgba(255, 255, 255, 0.12);
+  width: 36px;
+  height: 36px;
+  border: 3px solid rgba(255, 255, 255, 0.12);
   border-top-color: var(--accent);
   border-radius: 50%;
   animation: splashSpin 0.7s linear infinite;
