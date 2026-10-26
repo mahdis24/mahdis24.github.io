@@ -19,11 +19,9 @@ const PRECACHE_ASSETS = [
   '/assets/icons/icon-512x512.png',
   '/assets/icons/maskable-icon-512x512.png',
   '/assets/images/avatar.webp',
-  '/assets/images/avatar-appbar.webp',
-  '/assets/Mahdi_Salek_Front_End_Developer.pdf'
+  '/assets/images/avatar-appbar.webp'
 ]
 
-// Install: precache essential static assets
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches
@@ -33,7 +31,6 @@ self.addEventListener('install', (event) => {
   )
 })
 
-// Activate: clean up older caches
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches
@@ -51,21 +48,17 @@ self.addEventListener('activate', (event) => {
   )
 })
 
-// Fetch handler
 self.addEventListener('fetch', (event) => {
   const url = new URL(event.request.url)
 
-  // Only handle GET and same-origin requests
   if (event.request.method !== 'GET' || url.origin !== self.location.origin) {
     return
   }
 
-  // Cache-first strategy for static immutable assets (fonts, icons, images)
   if (
     url.pathname.startsWith('/assets/fonts/') ||
     url.pathname.startsWith('/assets/icons/') ||
-    url.pathname.startsWith('/assets/images/') ||
-    url.pathname.endsWith('.pdf')
+    url.pathname.startsWith('/assets/images/')
   ) {
     event.respondWith(
       caches.match(event.request).then((cachedResponse) => {
@@ -84,7 +77,6 @@ self.addEventListener('fetch', (event) => {
     return
   }
 
-  // Stale-While-Revalidate for HTML, CSS, and JS (instant load from cache + background refresh)
   event.respondWith(
     caches
       .match(event.request, { ignoreSearch: true })
@@ -100,12 +92,17 @@ self.addEventListener('fetch', (event) => {
             return networkResponse
           })
           .catch(() => {
+            if (cachedResponse) return cachedResponse
             if (event.request.mode === 'navigate') {
               return caches.match('/', { ignoreSearch: true })
             }
           })
 
-        return cachedResponse || fetchPromise
+        return (
+          cachedResponse ||
+          fetchPromise ||
+          caches.match('/', { ignoreSearch: true })
+        )
       })
   )
 })
