@@ -1,6 +1,6 @@
 /** @format */
 
-const CACHE_NAME = 'mahdisalek-v3'
+const CACHE_NAME = 'mahdisalek-v4'
 const PRECACHE_ASSETS = [
   '/',
   '/?source=pwa',
