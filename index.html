@@ -11,6 +11,16 @@
     <link rel="canonical" href="https://mahdis24.tech/" />
     <link rel="alternate" hreflang="en" href="https://mahdis24.tech/" />
     <link rel="alternate" hreflang="x-default" href="https://mahdis24.tech/" />
+    <link
+      rel="help"
+      type="text/markdown"
+      href="https://mahdis24.tech/llms.txt"
+      title="LLM Overview" />
+    <link
+      rel="alternate"
+      type="text/plain"
+      href="https://mahdis24.tech/llms-full.txt"
+      title="Full Plaintext Content" />
 
     <meta
       name="description"
@@ -178,6 +188,25 @@
             "JavaScript",
             "Pinia",
             "i18n"
+          ],
+          "hasOccupation": {
+            "@type": "Occupation",
+            "name": "Front-End Developer",
+            "skills": "Vue.js, Nuxt.js, Vuetify, TypeScript, Pinia, SSR, Web Application Architecture"
+          },
+          "workExample": [
+            {
+              "@type": "WebSite",
+              "name": "IDEX Platform",
+              "url": "https://idex.se/",
+              "description": "A complete platform for safety, compliance and a safe work environment in industry, construction and the public sector."
+            },
+            {
+              "@type": "WebSite",
+              "name": "Procycons",
+              "url": "https://procycons.com/",
+              "description": "Combines digital solutions with ecological sustainability, creating a bridge between technology and environmental protection."
+            }
           ]
         }
       }
@@ -256,14 +285,21 @@
 
           <div class="nav-links">
             <a href="#about">About</a>
+            <a
+              href="assets/Mahdi_Salek_Front_End_Developer.pdf"
+              target="_blank"
+              rel="noopener"
+              download>
+              Resume
+            </a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
             <button
               id="themeBtn"
               class="theme-btn"
-              aria-label="Toggle color theme"
-              title="Toggle theme">
+              aria-label="Toggle color theme (Press T)"
+              title="Toggle theme (Press T)">
               ◐
             </button>
           </div>
@@ -296,6 +332,14 @@
               <div class="hero-actions reveal">
                 <a class="btn primary" href="#contact">
                   Contact Me <span>↗</span>
+                </a>
+                <a
+                  class="btn"
+                  href="assets/Mahdi_Salek_Front_End_Developer.pdf"
+                  target="_blank"
+                  rel="noopener"
+                  download>
+                  Resume <span>↓</span>
                 </a>
               </div>
             </div>
@@ -437,6 +481,7 @@
               <a
                 href="assets/Mahdi_Salek_Front_End_Developer.pdf"
                 target="_blank"
+                rel="noopener"
                 download
                 class="btn primary">
                 My Resume (PDF) <span>↗</span>
@@ -602,11 +647,40 @@
                 collaboration, freelance work or a technical conversation, get
                 in touch.
               </p>
-              <a
-                class="email-link color-accent"
-                href="mailto:mahdi.6n@gmail.com">
-                mahdi.6n@gmail.com <span>↗</span>
-              </a>
+              <div class="email-row">
+                <a
+                  class="email-link color-accent"
+                  href="mailto:mahdi.6n@gmail.com">
+                  mahdi.6n@gmail.com <span>↗</span>
+                </a>
+                <button
+                  id="copyEmailBtn"
+                  class="copy-email-btn"
+                  aria-label="Copy email address"
+                  title="Copy email">
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true">
+                    <rect
+                      x="9"
+                      y="9"
+                      width="13"
+                      height="13"
+                      rx="2"
+                      ry="2"></rect>
+                    <path
+                      d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                  <span class="copy-label">Copy</span>
+                </button>
+              </div>
               <div class="socials">
                 <a
                   href="https://linkedin.com/in/mahdi-s24/"
@@ -724,6 +798,7 @@
     <script>
       const themeBtn = document.getElementById('themeBtn')
       const luncherBadge = document.getElementById('luncherBadge')
+      const copyBtn = document.getElementById('copyEmailBtn')
 
       document.getElementById('year').textContent = new Date().getFullYear()
 
@@ -774,6 +849,43 @@
       document
         .querySelectorAll('.reveal')
         .forEach((element) => observer.observe(element))
+
+      if (copyBtn) {
+        copyBtn.addEventListener('click', async () => {
+          try {
+            await navigator.clipboard.writeText('mahdi.6n@gmail.com')
+            const label = copyBtn.querySelector('.copy-label')
+            const originalText = label.textContent
+            label.textContent = 'Copied! ✓'
+            copyBtn.classList.add('copied')
+            setTimeout(() => {
+              label.textContent = originalText
+              copyBtn.classList.remove('copied')
+            }, 2000)
+          } catch {
+            window.location.href = 'mailto:mahdi.6n@gmail.com'
+          }
+        })
+      }
+
+      window.addEventListener('keydown', (e) => {
+        if (
+          ['INPUT', 'TEXTAREA'].includes(e.target.tagName) ||
+          e.target.isContentEditable
+        ) {
+          return
+        }
+        if (e.key === 't' || e.key === 'T') {
+          changeTheme()
+          syncThemeState()
+        }
+      })
+
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').catch(() => {})
+        })
+      }
     </script>
   </body>
 </html>
