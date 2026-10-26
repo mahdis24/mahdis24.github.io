@@ -265,6 +265,17 @@
   </head>
 
   <body>
+    <div id="pwa-splash" aria-hidden="true">
+      <div class="splash-content">
+        <img
+          src="assets/icons/icon-192x192.png"
+          alt="Mahdi Salek Logo"
+          width="84"
+          height="84"
+          class="splash-logo" />
+        <div class="splash-spinner"></div>
+      </div>
+    </div>
     <noscript>
       <iframe
         src="https://www.googletagmanager.com/ns.html?id=GTM-TCGZDW6L"
@@ -892,6 +903,34 @@
         window.addEventListener('load', () => {
           navigator.serviceWorker.register('/sw.js').catch(() => {})
         })
+      }
+
+      // PWA Splash Screen Controller
+      const isPWA =
+        window.matchMedia('(display-mode: standalone)').matches ||
+        window.navigator.standalone === true ||
+        window.location.search.includes('source=pwa')
+
+      if (isPWA) {
+        document.documentElement.classList.add('pwa-mode')
+        const splash = document.getElementById('pwa-splash')
+        if (splash) {
+          const startTime = performance.now()
+          const hideSplash = () => {
+            const elapsed = performance.now() - startTime
+            const delay = Math.max(0, 450 - elapsed)
+            setTimeout(() => {
+              splash.classList.add('splash-hide')
+              setTimeout(() => splash.remove(), 400)
+            }, delay)
+          }
+
+          if (document.readyState === 'complete') {
+            hideSplash()
+          } else {
+            window.addEventListener('load', hideSplash, { once: true })
+          }
+        }
       }
     </script>
   </body>
