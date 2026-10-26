@@ -6,7 +6,6 @@
   "start_url": "/?source=pwa",
   "scope": "/",
   "display": "standalone",
-  "display_override": ["window-controls-overlay", "standalone"],
   "background_color": "#080a0f",
   "theme_color": "#080a0f",
   "lang": "en",
