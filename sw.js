@@ -1,12 +1,14 @@
 /** @format */
 
-const CACHE_NAME = 'mahdisalek-v1'
+const CACHE_NAME = 'mahdisalek-v2'
 const PRECACHE_ASSETS = [
   '/',
+  '/?source=pwa',
   '/index.html',
   '/manifest.webmanifest',
   '/styles/fonts-minify.css',
   '/styles/index-minify.css',
+  '/scripts/webmcp-minify.js',
   '/assets/fonts/dm-sans.woff2',
   '/assets/fonts/space-grotesk.woff2',
   '/assets/favicon.ico',
@@ -48,7 +50,7 @@ self.addEventListener('activate', (event) => {
   )
 })
 
-// Fetch: Stale-While-Revalidate for local assets, ignore third-party analytics
+// Fetch handler
 self.addEventListener('fetch', (event) => {
   const url = new URL(event.request.url)
 
@@ -57,7 +59,7 @@ self.addEventListener('fetch', (event) => {
     return
   }
 
-  // Cache-first strategy for fonts and images
+  // Cache-first strategy for static immutable assets (fonts, icons, images)
   if (
     url.pathname.startsWith('/assets/fonts/') ||
     url.pathname.startsWith('/assets/icons/') ||
@@ -80,20 +82,34 @@ self.addEventListener('fetch', (event) => {
     return
   }
 
-  // Network-first with cache fallback for pages and CSS/JS
+  // Stale-While-Revalidate for HTML, CSS, and JS (instant load from cache + background refresh)
   event.respondWith(
-    fetch(event.request)
-      .then((networkResponse) => {
-        if (networkResponse && networkResponse.status === 200) {
-          const responseToCache = networkResponse.clone()
-          caches
-            .open(CACHE_NAME)
-            .then((cache) => cache.put(event.request, responseToCache))
-        }
-        return networkResponse
+    caches
+      .match(event.request, { ignoreSearch: true })
+      .then((cachedResponse) => {
+        const fetchPromise = fetch(event.request)
+          .then((networkResponse) => {
+            if (networkResponse && networkResponse.status === 200) {
+              const responseToCache = networkResponse.clone()
+              caches
+                .open(CACHE_NAME)
+                .then((cache) => cache.put(event.request, responseToCache))
+            }
+            return networkResponse
+          })
+          .catch(() => {
+            if (cachedResponse) return cachedResponse
+            if (event.request.mode === 'navigate') {
+              return caches.match('/', { ignoreSearch: true })
+            }
+          })
+
+        // Return cached response instantly if available, otherwise wait for network
+        return (
+          cachedResponse ||
+          fetchPromise ||
+          caches.match('/', { ignoreSearch: true })
+        )
       })
-      .catch(() =>
-        caches.match(event.request).then((res) => res || caches.match('/'))
-      )
   )
 })
