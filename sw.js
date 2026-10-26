@@ -19,7 +19,8 @@ const PRECACHE_ASSETS = [
   '/assets/icons/icon-512x512.png',
   '/assets/icons/maskable-icon-512x512.png',
   '/assets/images/avatar.webp',
-  '/assets/images/avatar-appbar.webp'
+  '/assets/images/avatar-appbar.webp',
+  '/assets/Mahdi_Salek_Front_End_Developer.pdf'
 ]
 
 // Install: precache essential static assets
