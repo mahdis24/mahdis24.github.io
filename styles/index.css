@@ -1,6 +1,8 @@
 /** @format */
 
 :root {
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --font-display: 'Space Grotesk', sans-serif;
   --bg: #080a0f;
   --surface: rgba(255, 255, 255, 0.045);
   --surface-strong: rgba(255, 255, 255, 0.07);
@@ -16,12 +18,10 @@
   --radius-sm: 14px;
   --shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
   --border-width: 2px;
-  --wcb-bg-primary: #f8fafc;
-  --wcb-text-primary: #0f172a;
-  --wcb-border: #cbd5e1;
-  --wcb-subtext: #64748b;
-  --font-body: 'DM Sans', system-ui, sans-serif;
-  --font-display: 'Space Grotesk', sans-serif;
+  --wcb-bg-primary: #111827;
+  --wcb-text-primary: #f8fafc;
+  --wcb-border: #334155;
+  --wcb-subtext: #94a3b8;
 }
 
 :root[data-theme='light'] {
@@ -37,10 +37,10 @@
   --accent-ink: #fff;
   --shadow: 0 24px 70px rgba(18, 30, 25, 0.1);
   --border-width: 3px;
-  --wcb-bg-primary: #1e293b;
-  --wcb-text-primary: #f8fafc;
-  --wcb-border: #334155;
-  --wcb-subtext: #94a3b8;
+  --wcb-bg-primary: white;
+  --wcb-text-primary: #0f172a;
+  --wcb-border: #cbd5e1;
+  --wcb-subtext: #64748b;
 }
 
 * {
