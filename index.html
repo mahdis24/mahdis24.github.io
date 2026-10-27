@@ -340,10 +340,124 @@
               title="Toggle theme (Press T)">
               ◐
             </button>
+            <button
+              id="menuToggle"
+              class="menu-toggle"
+              aria-label="Open navigation menu"
+              aria-expanded="false"
+              aria-controls="mobileMenu">
+              <span class="hamburger-box">
+                <span class="hamburger-line line-1"></span>
+                <span class="hamburger-line line-2"></span>
+                <span class="hamburger-line line-3"></span>
+              </span>
+            </button>
           </div>
         </nav>
+
+        <div
+          id="mobileMenu"
+          class="mobile-menu"
+          aria-label="Mobile navigation"
+          aria-hidden="true">
+          <div class="mobile-menu-inner">
+            <ul class="mobile-nav-list">
+              <li>
+                <a href="#about" class="mobile-nav-link">
+                  <span class="mobile-nav-item-left">
+                    <span class="mobile-nav-index">01</span>
+                    <span class="mobile-nav-text">About</span>
+                  </span>
+                  <span class="mobile-nav-arrow" aria-hidden="true">→</span>
+                </a>
+              </li>
+              <li>
+                <a href="#skills" class="mobile-nav-link">
+                  <span class="mobile-nav-item-left">
+                    <span class="mobile-nav-index">02</span>
+                    <span class="mobile-nav-text">Skills</span>
+                  </span>
+                  <span class="mobile-nav-arrow" aria-hidden="true">→</span>
+                </a>
+              </li>
+              <li>
+                <a href="#projects" class="mobile-nav-link">
+                  <span class="mobile-nav-item-left">
+                    <span class="mobile-nav-index">03</span>
+                    <span class="mobile-nav-text">Projects</span>
+                  </span>
+                  <span class="mobile-nav-arrow" aria-hidden="true">→</span>
+                </a>
+              </li>
+              <li>
+                <a href="#contact" class="mobile-nav-link">
+                  <span class="mobile-nav-item-left">
+                    <span class="mobile-nav-index">04</span>
+                    <span class="mobile-nav-text">Contact</span>
+                  </span>
+                  <span class="mobile-nav-arrow" aria-hidden="true">→</span>
+                </a>
+              </li>
+            </ul>
+
+            <div class="mobile-menu-divider"></div>
+
+            <a
+              href="assets/Mahdi_Salek_Front_End_Developer.pdf"
+              target="_blank"
+              rel="noopener"
+              download
+              class="btn primary mobile-resume-btn">
+              Resume <span>↓</span>
+            </a>
+
+            <div class="mobile-menu-socials">
+              <a
+                href="https://linkedin.com/in/mahdi-s24/"
+                target="_blank"
+                rel="noopener"
+                aria-label="LinkedIn">
+                <img
+                  src="assets/icons/linkedin.svg"
+                  alt="LinkedIn"
+                  width="30"
+                  height="30"
+                  draggable="false" />
+              </a>
+              <a
+                href="https://t.me/mahdi_s24/"
+                target="_blank"
+                rel="noopener"
+                aria-label="Telegram">
+                <img
+                  src="assets/icons/telegram.svg"
+                  alt="Telegram"
+                  width="30"
+                  height="30"
+                  draggable="false" />
+              </a>
+              <a href="mailto:mahdi.6n@gmail.com" aria-label="Email Mahdi">
+                <svg
+                  width="30"
+                  height="30"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true">
+                  <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
+
+    <div id="mobileBackdrop" class="mobile-backdrop" aria-hidden="true"></div>
 
     <main id="top">
       <section class="hero">
@@ -855,6 +969,9 @@
 
     <script>
       const themeBtn = document.getElementById('themeBtn')
+      const menuToggle = document.getElementById('menuToggle')
+      const mobileMenu = document.getElementById('mobileMenu')
+      const mobileBackdrop = document.getElementById('mobileBackdrop')
       const luncherBadge = document.getElementById('luncherBadge')
       const copyBtn = document.getElementById('copyEmailBtn')
       const splash = document.getElementById('pwa-splash')
@@ -865,6 +982,63 @@
         window.matchMedia('(display-mode: standalone)').matches ||
         window.navigator.standalone === true ||
         window.location.search.includes('source=pwa')
+
+      function openMobileMenu() {
+        if (!mobileMenu || !menuToggle) return
+        menuToggle.setAttribute('aria-expanded', 'true')
+        menuToggle.setAttribute('aria-label', 'Close navigation menu')
+        mobileMenu.setAttribute('aria-hidden', 'false')
+        mobileMenu.classList.add('is-open')
+        if (mobileBackdrop) {
+          mobileBackdrop.setAttribute('aria-hidden', 'false')
+          mobileBackdrop.classList.add('is-open')
+        }
+        document.body.classList.add('menu-open')
+      }
+
+      function closeMobileMenu() {
+        if (!mobileMenu || !menuToggle) return
+        menuToggle.setAttribute('aria-expanded', 'false')
+        menuToggle.setAttribute('aria-label', 'Open navigation menu')
+        mobileMenu.setAttribute('aria-hidden', 'true')
+        mobileMenu.classList.remove('is-open')
+        if (mobileBackdrop) {
+          mobileBackdrop.setAttribute('aria-hidden', 'true')
+          mobileBackdrop.classList.remove('is-open')
+        }
+        document.body.classList.remove('menu-open')
+      }
+
+      function toggleMobileMenu() {
+        const isOpen = menuToggle?.getAttribute('aria-expanded') === 'true'
+        if (isOpen) {
+          closeMobileMenu()
+        } else {
+          openMobileMenu()
+        }
+      }
+
+      if (menuToggle) {
+        menuToggle.addEventListener('click', toggleMobileMenu)
+      }
+
+      if (mobileBackdrop) {
+        mobileBackdrop.addEventListener('click', closeMobileMenu)
+      }
+
+      if (mobileMenu) {
+        mobileMenu.querySelectorAll('a').forEach((link) => {
+          link.addEventListener('click', closeMobileMenu)
+        })
+      }
+
+      window
+        .matchMedia('(min-width: 701px)')
+        .addEventListener('change', (e) => {
+          if (e.matches) {
+            closeMobileMenu()
+          }
+        })
 
       function syncThemeState() {
         if (!themeBtn) return
@@ -964,6 +1138,15 @@
       })
 
       window.addEventListener('keydown', (e) => {
+        if (
+          e.key === 'Escape' &&
+          menuToggle?.getAttribute('aria-expanded') === 'true'
+        ) {
+          closeMobileMenu()
+          menuToggle.focus()
+          return
+        }
+
         if (e.defaultPrevented || e.ctrlKey || e.metaKey || e.altKey) return
 
         if (e.code === 'KeyT' || e.key === 't' || e.key === 'T') {
