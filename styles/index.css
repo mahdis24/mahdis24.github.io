@@ -1060,7 +1060,7 @@ footer {
   }
 
   .contact-box > img {
-    margin-top: 60px;
+    margin-top: 36px;
     transform: scaleX(1);
     width: 90%;
     height: 100%;
@@ -1140,8 +1140,15 @@ img {
     align-items: center;
     padding-top: 24px;
   }
+  .socials {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+    gap: 36px 48px;
+    margin-top: 36px;
+  }
   .socials a {
-    flex: 0 0 calc((100% - (36px * 2)) / 3);
+    flex: initial;
   }
   .copy-email-btn {
     padding: 8px;
