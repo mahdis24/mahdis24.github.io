@@ -6,7 +6,7 @@
   Location: Yerevan, Armenia
 
 /* SITE */
-  Last update: 2026/10/26
+  Last update: 2026/10/27
   Standards: HTML5, CSS3, JavaScript, W3C PWA, Schema.org
   Typography: Space Grotesk, DM Sans
   Software: Vue, Nuxt, Vuetify, TypeScript
