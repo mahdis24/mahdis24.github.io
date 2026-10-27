@@ -857,18 +857,17 @@
 
       function syncThemeState() {
         const isDark = document.documentElement.dataset.theme === 'dark'
-        if (themeBtn) {
-          themeBtn.setAttribute('aria-pressed', isDark ? 'true' : 'false')
-          themeBtn.setAttribute(
-            'aria-label',
-            `Switch to ${isDark ? 'light' : 'dark'} theme`
-          )
-        }
+
+        themeBtn.setAttribute('aria-pressed', isDark ? 'true' : 'false')
+        themeBtn.setAttribute(
+          'aria-label',
+          `Switch to ${isDark ? 'light' : 'dark'} theme`
+        )
+
         changeBadgeTheme()
       }
 
       function changeBadgeTheme() {
-        if (!luncherBadge) return
         try {
           const luncherBadgeSrc = new URL(luncherBadge.src)
           if (document.documentElement.dataset.theme === 'dark') {
