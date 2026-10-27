@@ -47,9 +47,10 @@
       'Git',
       'GitHub Actions',
       'Docker',
+      'Vite',
+      'Vitest',
       'npm',
       'bun',
-      'Webpack',
       'ESLint',
       'Prettier'
     ]

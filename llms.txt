@@ -26,7 +26,7 @@ Mahdi Salek builds feature-rich web applications with an emphasis on clean archi
 - [Pinia](https://pinia.vuejs.org/): State management for Vue
 - [Nuxt i18n](https://i18n.nuxtjs.org/): Internationalization for Nuxt
 - Additional front-end technologies and practices: JavaScript, VueUse, Vue Router, HTML, CSS, Sass, responsive design, Material Design Icons, left-to-right and right-to-left layouts, and light/dark themes.
-- Tooling: Git, GitHub Actions, Docker, npm, Bun, Webpack, ESLint, and Prettier.
+- Tooling & Testing: Git, GitHub Actions, Docker, Vite, Vitest, npm, Bun, ESLint, and Prettier.
 
 ## Professional Focus
 

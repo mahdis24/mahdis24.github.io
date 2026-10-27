@@ -50,11 +50,11 @@ Vue, Nuxt, Vuetify, TypeScript, JavaScript, Pinia, i18n, VueUse, Vue Router
 
 ### UI and styling
 
-HTML, CSS, Sass, responsive design, Material Design Icons, LTR/RTL support, light/dark themes
+HTML, CSS, Sass, Tailwind, Responsive design, Material Design Icons, LTR/RTL support, light/dark themes
 
-### Tooling
+### Tooling & Testing
 
-Git, GitHub Actions, Docker, npm, bun, Webpack, ESLint, Prettier
+Git, GitHub Actions, Docker, Vite, Vitest, npm, bun, ESLint, Prettier
 
 ## Projects
 
