@@ -49,6 +49,11 @@
   padding: 0;
 }
 
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 90px;
@@ -507,23 +512,13 @@ h2 {
   background:
     radial-gradient(
       circle at 100% 0%,
-      rgba(98, 230, 180, 0.09),
+      color-mix(in srgb, var(--accent) 9%, transparent),
       transparent 18rem
     ),
     var(--surface);
   transition:
     transform 0.25s,
     border-color 0.25s;
-}
-
-.project:nth-child(2) {
-  background:
-    radial-gradient(
-      circle at 100% 0%,
-      rgba(138, 180, 255, 0.1),
-      transparent 18rem
-    ),
-    var(--surface);
 }
 
 .project:hover {
@@ -853,7 +848,7 @@ img {
     height: 58px;
     padding-left: 12px;
   }
-  .nav-links a {
+  .nav-links a:not([download]) {
     display: none;
   }
   .hero {
