@@ -194,7 +194,14 @@
             "TypeScript",
             "JavaScript",
             "Pinia",
-            "i18n"
+            "i18n",
+            "Sass",
+            "Tailwind",
+            "Vite",
+            "Vitest",
+            "Docker",
+            "GitHub Actions",
+            "Bun"
           ],
           "hasOccupation": {
             "@type": "Occupation",
@@ -730,7 +737,8 @@
                     alt="LinkedIn"
                     width="48"
                     height="48"
-                    draggable="false" />
+                    draggable="false"
+                    loading="lazy" />
                 </a>
                 <a
                   href="https://github.com/mahdis24"
@@ -741,7 +749,8 @@
                     alt="Github"
                     width="48"
                     height="48"
-                    draggable="false" />
+                    draggable="false"
+                    loading="lazy" />
                 </a>
                 <a
                   href="https://stackoverflow.com/users/6419842/mahdi"
@@ -752,7 +761,8 @@
                     alt="StackOverflow"
                     width="60"
                     height="60"
-                    draggable="false" />
+                    draggable="false"
+                    loading="lazy" />
                 </a>
                 <a
                   href="https://x.com/mahdi_s24/"
@@ -763,7 +773,8 @@
                     alt="X"
                     width="42"
                     height="42"
-                    draggable="false" />
+                    draggable="false"
+                    loading="lazy" />
                 </a>
                 <a
                   href="https://t.me/mahdi_s24/"
@@ -774,7 +785,8 @@
                     alt="Telegram"
                     width="48"
                     height="48"
-                    draggable="false" />
+                    draggable="false"
+                    loading="lazy" />
                 </a>
                 <a
                   href="https://wa.me/37495157451"
@@ -785,7 +797,8 @@
                     alt="WhatsApp"
                     width="48"
                     height="48"
-                    draggable="false" />
+                    draggable="false"
+                    loading="lazy" />
                 </a>
               </div>
             </div>
@@ -882,7 +895,7 @@
       const hideSplash = () => {
         if (!splash) return
         splash.classList.add('splash-hide')
-        setTimeout(() => splash.remove(), 400)
+        setTimeout(() => splash.remove(), 500)
       }
 
       const observer = new IntersectionObserver(
@@ -914,9 +927,9 @@
             { once: true }
           )
         } else {
-          setTimeout(hideSplash, 300)
+          setTimeout(hideSplash, 600)
         }
-        setTimeout(hideSplash, 1000)
+        setTimeout(hideSplash, 1200)
       } else {
         if (splash) splash.remove()
       }
