@@ -836,8 +836,14 @@
       const themeBtn = document.getElementById('themeBtn')
       const luncherBadge = document.getElementById('luncherBadge')
       const copyBtn = document.getElementById('copyEmailBtn')
+      const splash = document.getElementById('pwa-splash')
 
       document.getElementById('year').textContent = new Date().getFullYear()
+
+      const isColdPWA =
+        window.matchMedia('(display-mode: standalone)').matches ||
+        window.navigator.standalone === true ||
+        window.location.search.includes('source=pwa')
 
       function syncThemeState() {
         const isDark = document.documentElement.dataset.theme === 'dark'
@@ -850,11 +856,6 @@
         }
         changeBadgeTheme()
       }
-
-      themeBtn.addEventListener('click', () => {
-        changeTheme()
-        syncThemeState()
-      })
 
       function changeBadgeTheme() {
         if (!luncherBadge) return
@@ -869,7 +870,11 @@
         } catch {}
       }
 
-      syncThemeState()
+      const hideSplash = () => {
+        if (!splash) return
+        splash.classList.add('splash-hide')
+        setTimeout(() => splash.remove(), 400)
+      }
 
       const observer = new IntersectionObserver(
         (entries) => {
@@ -883,79 +888,72 @@
         { threshold: 0.1 }
       )
 
-      document
-        .querySelectorAll('.reveal')
-        .forEach((element) => observer.observe(element))
-
-      if (copyBtn) {
-        copyBtn.addEventListener('click', async () => {
-          try {
-            await navigator.clipboard.writeText('mahdi.6n@gmail.com')
-            const label = copyBtn.querySelector('.copy-label')
-            const originalText = label.textContent
-            label.textContent = 'Copied! ✓'
-            copyBtn.classList.add('copied')
-            setTimeout(() => {
-              label.textContent = originalText
-              copyBtn.classList.remove('copied')
-            }, 2000)
-          } catch {
-            window.location.href = 'mailto:mahdi.6n@gmail.com'
-          }
-        })
-      }
-
-      window.addEventListener('keydown', (e) => {
-        if (
-          ['INPUT', 'TEXTAREA'].includes(e.target.tagName) ||
-          e.target.isContentEditable
-        ) {
-          return
-        }
-        if (e.key === 't' || e.key === 'T') {
-          changeTheme()
-          syncThemeState()
-        }
-      })
-
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
           navigator.serviceWorker.register('/sw.js').catch(() => {})
         })
       }
 
-      // PWA Splash Screen Controller
-      const isPWA =
-        window.matchMedia('(display-mode: standalone)').matches ||
-        window.navigator.standalone === true ||
-        window.location.search.includes('source=pwa')
-
-      if (isPWA) {
+      if (isColdPWA) {
         document.title = 'Mahdi Salek - Frontend Developer'
         document.documentElement.classList.add('pwa-mode')
-        const splash = document.getElementById('pwa-splash')
-        if (splash) {
-          let hidden = false
-          const hideSplash = () => {
-            if (hidden) return
-            hidden = true
-            splash.classList.add('splash-hide')
-            setTimeout(() => splash.remove(), 400)
-          }
 
-          // 1. Try to dismiss as soon as the window finishes loading
-          if (document.readyState === 'complete') {
-            setTimeout(hideSplash, 200)
-          } else {
-            window.addEventListener('load', () => setTimeout(hideSplash, 150), {
-              once: true
-            })
-          }
-
-          // 2. Safety Fallback: Never let the splash stay visible longer than 1.2s
-          setTimeout(hideSplash, 1500)
+        if (document.readyState === 'loading') {
+          document.addEventListener(
+            'DOMContentLoaded',
+            () => setTimeout(hideSplash, 300),
+            { once: true }
+          )
+        } else {
+          setTimeout(hideSplash, 300)
         }
+        setTimeout(hideSplash, 1000)
+      } else {
+        if (splash) splash.remove()
       }
+
+      document
+        .querySelectorAll('.reveal')
+        .forEach((element) => observer.observe(element))
+
+      syncThemeState()
+
+      themeBtn.addEventListener('click', () => {
+        changeTheme()
+        syncThemeState()
+      })
+
+      copyBtn.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText('mahdi.6n@gmail.com')
+          const label = copyBtn.querySelector('.copy-label')
+          const originalText = label.textContent
+          label.textContent = 'Copied! ✓'
+          copyBtn.classList.add('copied')
+          setTimeout(() => {
+            label.textContent = originalText
+            copyBtn.classList.remove('copied')
+          }, 2000)
+        } catch {
+          window.location.href = 'mailto:mahdi.6n@gmail.com'
+        }
+      })
+
+      window.addEventListener('keydown', (e) => {
+        if (e.keyCode == 84 || e.key === 't' || e.key === 'T') {
+          changeTheme()
+          syncThemeState()
+        }
+      })
+
+      window
+        .matchMedia('(display-mode: standalone)')
+        .addEventListener('change', (e) => {
+          if (e.matches) {
+            document.title = 'Mahdi Salek - Frontend Developer'
+            hideSplash()
+          }
+        })
     </script>
   </body>
 </html>
