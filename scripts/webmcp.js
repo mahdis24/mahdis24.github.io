@@ -38,6 +38,7 @@
       'HTML',
       'CSS',
       'Sass',
+      'Tailwind',
       'Responsive design',
       'Material Design Icons',
       'LTR/RTL',
