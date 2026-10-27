@@ -311,7 +311,7 @@
           <a class="brand" href="#top" aria-label="Return to top">
             <img
               src="assets/images/avatar-appbar.webp"
-              alt="avatar"
+              alt="Mahdi Salek Avatar"
               width="42"
               height="42"
               decoding="async"
@@ -441,7 +441,7 @@
                       <strong>
                         <img
                           src="assets/icons/typescript.svg"
-                          alt="Typescript"
+                          alt="TypeScript"
                           width="24"
                           height="24"
                           draggable="false" />
@@ -519,14 +519,12 @@
                 shipping reliable production builds.
               </p>
 
-              <br />
-              <br />
-
               <a
                 href="assets/Mahdi_Salek_Front_End_Developer.pdf"
                 target="_blank"
                 rel="noopener"
                 download
+                style="margin-top: 36px"
                 class="btn primary">
                 My Resume (PDF) <span>↗</span>
               </a>
@@ -746,7 +744,7 @@
                   rel="noopener">
                   <img
                     src="assets/icons/github.svg"
-                    alt="Github"
+                    alt="GitHub"
                     width="48"
                     height="48"
                     draggable="false"
@@ -817,7 +815,7 @@
 
     <footer>
       <div class="wrap footer-inner">
-        <span>© <span id="year"></span> Mahdi Salek</span>
+        <span>© <span id="year">2026</span> Mahdi Salek</span>
         <span>Built with Pure HTML, CSS & JavaScript</span>
       </div>
       <section id="badges">
@@ -869,6 +867,8 @@
         window.location.search.includes('source=pwa')
 
       function syncThemeState() {
+        if (!themeBtn) return
+
         const isDark = document.documentElement.dataset.theme === 'dark'
 
         themeBtn.setAttribute('aria-pressed', isDark ? 'true' : 'false')
@@ -940,10 +940,12 @@
 
       syncThemeState()
 
-      themeBtn.addEventListener('click', () => {
-        changeTheme()
-        syncThemeState()
-      })
+      if (themeBtn) {
+        themeBtn.addEventListener('click', () => {
+          changeTheme()
+          syncThemeState()
+        })
+      }
 
       copyBtn.addEventListener('click', async () => {
         try {
