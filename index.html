@@ -240,7 +240,7 @@
           const theme =
             saved === 'light' || saved === 'dark' ? saved
             : prefersDark ? 'dark'
-            : 'dark'
+            : 'light'
           changeTheme(theme)
         } catch (e) {
           changeTheme('dark')
@@ -262,6 +262,15 @@
     </script>
 
     <script src="scripts/webmcp-minify.js" defer></script>
+
+    <noscript>
+      <style>
+        .reveal {
+          opacity: 1 !important;
+          transform: none !important;
+        }
+      </style>
+    </noscript>
   </head>
 
   <body>
@@ -302,7 +311,6 @@
               fetchpriority="high"
               draggable="false"
               class="border-accent" />
-            <!-- <span class="brand-mark">M</span> -->
             <span class="brand-name">Mahdi Salek</span>
           </a>
 
@@ -576,6 +584,7 @@
                   <span class="tag">HTML</span>
                   <span class="tag">CSS</span>
                   <span class="tag">Sass</span>
+                  <span class="tag">Tailwind</span>
                   <span class="tag">Responsive design</span>
                   <span class="tag">Material Design Icons</span>
                   <span class="tag">LTR/RTL</span>
@@ -587,16 +596,17 @@
             <article class="skill-card reveal">
               <div>
                 <span class="skill-number">03</span>
-                <h3>Tooling</h3>
+                <h3>Tooling & Testing</h3>
               </div>
               <div>
                 <div class="tags">
                   <span class="tag">Git</span>
                   <span class="tag">GitHub Actions</span>
                   <span class="tag">Docker</span>
+                  <span class="tag">Vite</span>
+                  <span class="tag">Vitest</span>
                   <span class="tag">npm</span>
                   <span class="tag">bun</span>
-                  <span class="tag">Webpack</span>
                   <span class="tag">ESLint</span>
                   <span class="tag">Prettier</span>
                 </div>
@@ -940,7 +950,9 @@
       })
 
       window.addEventListener('keydown', (e) => {
-        if (e.keyCode == 84 || e.key === 't' || e.key === 'T') {
+        if (e.defaultPrevented || e.ctrlKey || e.metaKey || e.altKey) return
+
+        if (e.code === 'KeyT' || e.key === 't' || e.key === 'T') {
           changeTheme()
           syncThemeState()
         }
