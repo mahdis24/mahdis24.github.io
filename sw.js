@@ -1,6 +1,6 @@
 /** @format */
 
-const CACHE_NAME = 'mahdisalek-v4'
+const CACHE_NAME = 'mahdisalek-v4.1'
 const PRECACHE_ASSETS = [
   '/',
   '/?source=pwa',
@@ -98,11 +98,7 @@ self.addEventListener('fetch', (event) => {
             }
           })
 
-        return (
-          cachedResponse ||
-          fetchPromise ||
-          caches.match('/', { ignoreSearch: true })
-        )
+        return cachedResponse || fetchPromise
       })
   )
 })
