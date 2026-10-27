@@ -1059,6 +1059,13 @@ footer {
     flex-direction: column;
   }
 
+  .contact-box > img {
+    margin-top: 60px;
+    transform: scaleX(1);
+    width: 90%;
+    height: 100%;
+  }
+
   .socials {
     text-align: center;
   }
@@ -1135,12 +1142,6 @@ img {
   }
   .socials a {
     flex: 0 0 calc((100% - (36px * 2)) / 3);
-  }
-  .contact-box > img {
-    margin-top: 60px;
-    transform: scaleX(1);
-    width: 90%;
-    height: 100%;
   }
   .copy-email-btn {
     padding: 8px;
