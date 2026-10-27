@@ -16,7 +16,6 @@
   --radius-sm: 14px;
   --shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
   --border-width: 2px;
-  --social-gradient: rgba(255, 255, 255, 0.18);
   --wcb-bg-primary: #f8fafc;
   --wcb-text-primary: #0f172a;
   --wcb-border: #cbd5e1;
@@ -38,7 +37,6 @@
   --accent-ink: #fff;
   --shadow: 0 24px 70px rgba(18, 30, 25, 0.1);
   --border-width: 3px;
-  --social-gradient: white;
   --wcb-bg-primary: #1e293b;
   --wcb-text-primary: #f8fafc;
   --wcb-border: #334155;
@@ -705,11 +703,7 @@ footer {
 }
 
 .socials {
-  border-radius: 28px;
-  border: 1px solid var(--social-gradient);
-  background: var(--social-gradient);
   margin-top: 48px;
-  padding: 18px;
   display: flex;
   gap: 36px;
   flex-wrap: wrap;
@@ -722,14 +716,16 @@ footer {
   align-items: center;
   justify-content: center;
   border-radius: 12px;
-  transition:
-    transform 0.2s,
-    opacity 0.2s;
+  transition: transform 0.3s;
 }
 
 .socials a:hover {
-  transform: translateY(-2px);
-  opacity: 0.85;
+  transform: scale(1.1);
+}
+
+[data-theme='dark'] .socials img[src*='github'],
+[data-theme='dark'] .socials img[src*='x.svg'] {
+  filter: invert(1);
 }
 
 .border-accent {
