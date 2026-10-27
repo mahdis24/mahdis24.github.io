@@ -884,9 +884,9 @@
         try {
           const luncherBadgeSrc = new URL(luncherBadge.src)
           if (document.documentElement.dataset.theme === 'dark') {
-            luncherBadgeSrc.searchParams.delete('theme')
-          } else {
             luncherBadgeSrc.searchParams.set('theme', 'dark')
+          } else {
+            luncherBadgeSrc.searchParams.delete('theme')
           }
           luncherBadge.src = luncherBadgeSrc.toString()
         } catch {}
