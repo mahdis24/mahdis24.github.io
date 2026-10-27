@@ -557,7 +557,7 @@ h2 {
 .project-bottom {
   margin-top: auto;
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   justify-content: flex-end;
   gap: 20px;
 }
