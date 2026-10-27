@@ -817,8 +817,8 @@
                   aria-label="Copy email address"
                   title="Copy email">
                   <svg
-                    width="14"
-                    height="14"
+                    width="18"
+                    height="18"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -837,6 +837,7 @@
                       d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
                   </svg>
                   <span class="copy-label">Copy</span>
+                  <span class="copy-icon">✓</span>
                 </button>
               </div>
               <div class="socials">
@@ -1122,11 +1123,13 @@
       }
 
       copyBtn.addEventListener('click', async () => {
+        if (copyBtn.classList.contains('copied')) return
+
         try {
           await navigator.clipboard.writeText('mahdi.6n@gmail.com')
           const label = copyBtn.querySelector('.copy-label')
           const originalText = label.textContent
-          label.textContent = 'Copied! ✓'
+          label.textContent = 'Copied!'
           copyBtn.classList.add('copied')
           setTimeout(() => {
             label.textContent = originalText
