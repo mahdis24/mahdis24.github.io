@@ -57,7 +57,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 90px;
+  scroll-padding-top: 45px;
 }
 
 body {
@@ -441,7 +441,6 @@ body.menu-open {
   position: relative;
   padding: 112px 0;
   border-top: 1px solid var(--line);
-  scroll-margin-top: -44px;
 }
 
 .section-label {
@@ -1094,15 +1093,12 @@ img {
   .wrap {
     width: min(var(--max), calc(100% - 28px));
   }
-  header {
-    padding-top: 8px;
-  }
   nav {
     height: 58px;
     padding-left: 12px;
   }
   html {
-    scroll-padding-top: 75px;
+    scroll-padding-top: 43px;
   }
   .nav-links a {
     display: none;
@@ -1128,7 +1124,6 @@ img {
   }
   .section {
     padding: 60px 0;
-    scroll-margin-top: -40px;
   }
   .section-heading {
     margin-bottom: 36px;
