@@ -1,14 +1,14 @@
 /** @format */
 
-const CACHE_NAME = 'mahdisalek-v4.3'
+const CACHE_NAME = 'mahdisalek-v4.4'
 const PRECACHE_ASSETS = [
   '/',
   '/?source=pwa',
   '/index.html',
   '/manifest.webmanifest',
+  '/scripts/webmcp-minify.js',
   '/styles/fonts-minify.css',
   '/styles/index-minify.css',
-  '/scripts/webmcp-minify.js',
   '/assets/fonts/dm-sans.woff2',
   '/assets/fonts/space-grotesk.woff2',
   '/assets/favicon.ico',
@@ -18,8 +18,21 @@ const PRECACHE_ASSETS = [
   '/assets/icons/icon-192x192.png',
   '/assets/icons/icon-512x512.png',
   '/assets/icons/maskable-icon-512x512.png',
+  '/assets/icons/github.svg',
+  '/assets/icons/i18n.svg',
+  '/assets/icons/linkedin.svg',
+  '/assets/icons/nuxt.svg',
+  '/assets/icons/pinia.svg',
+  '/assets/icons/stack_overflow.svg',
+  '/assets/icons/telegram.svg',
+  '/assets/icons/typescript.svg',
+  '/assets/icons/vue.svg',
+  '/assets/icons/vuetify.svg',
+  '/assets/icons/whatsapp.svg',
+  '/assets/icons/x.svg',
   '/assets/images/avatar.webp',
-  '/assets/images/avatar-appbar.webp'
+  '/assets/images/avatar-appbar.webp',
+  '/assets/Mahdi_Salek_Front_End_Developer.pdf'
 ]
 
 self.addEventListener('install', (event) => {
@@ -55,11 +68,7 @@ self.addEventListener('fetch', (event) => {
     return
   }
 
-  if (
-    url.pathname.startsWith('/assets/fonts/') ||
-    url.pathname.startsWith('/assets/icons/') ||
-    url.pathname.startsWith('/assets/images/')
-  ) {
+  if (url.pathname.startsWith('/assets/')) {
     event.respondWith(
       caches.match(event.request).then((cachedResponse) => {
         if (cachedResponse) return cachedResponse
