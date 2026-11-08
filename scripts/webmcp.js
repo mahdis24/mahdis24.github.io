@@ -10,14 +10,14 @@
 
   const OVERVIEW = {
     name: 'Mahdi Salek',
-    role: 'Front-End Developer',
+    role: 'Product-Minded Front-End Developer',
     summary:
-      'Front-end developer focused on the Vue and Nuxt ecosystem. Builds fast, feature-rich applications with an emphasis on clean architecture, SSR, maintainability and production quality.',
+      'Bridges user experience, product logic, and high-performance frontend engineering. Specializing in Vue & Nuxt, he builds intuitive dashboards, data-dense interfaces, and resilient web applications that turn complex workflows into effortless user experiences.',
     work: 'Dashboards, admin tools, data-heavy views and feature-rich web applications.',
     focus: [
-      'Vue, Nuxt & Vuetify (including SSR)',
-      'Clean, scalable architecture',
-      'Production-minded tooling, builds and polish'
+      'Vue & Nuxt ecosystem (including SSR)',
+      'Design systems, composables & clean state management',
+      'Accessibility (a11y), responsive UX & resilient error states'
     ],
     url: SITE_URL
   }
@@ -35,14 +35,15 @@
       'Vue Router'
     ],
     ui_styling: [
+      'Design Systems',
+      'WCAG a11y',
+      'Responsive Design',
+      'Tailwind',
       'HTML',
       'CSS',
       'Sass',
-      'Tailwind',
-      'Responsive design',
-      'Material Design Icons',
       'LTR/RTL',
-      'Light/Dark'
+      'Light/Dark Themes'
     ],
     tooling: [
       'Git',
@@ -50,6 +51,7 @@
       'Docker',
       'Vite',
       'Vitest',
+      'Core Web Vitals',
       'npm',
       'bun',
       'ESLint',
@@ -60,12 +62,14 @@
   const PROJECTS = [
     {
       name: 'IDEX Platform',
+      category: 'Enterprise SaaS · Safety',
       description:
         'A complete platform for safety, compliance and a safe work environment in industry, construction and the public sector.',
       url: 'https://idex.se/'
     },
     {
       name: 'Procycons',
+      category: 'Sustainability Tech · Platform',
       description:
         'Combines digital solutions with ecological sustainability, creating a bridge between technology and environmental protection.',
       url: 'https://procycons.com/'
