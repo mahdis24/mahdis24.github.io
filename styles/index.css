@@ -712,7 +712,7 @@ nav {
 }
 
 .project {
-  min-height: 340px;
+  min-height: 300px;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -727,7 +727,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 70px;
+  margin-bottom: 36px;
   color: var(--muted);
   font-size: 0.74rem;
 }
@@ -745,18 +745,22 @@ nav {
 }
 
 .project p {
-  max-width: 530px;
-  margin-top: 12px;
+  margin: 18px 0;
   color: var(--muted);
   font-size: 0.9rem;
+  text-align: justify;
 }
 
 .project-bottom {
-  margin-top: auto;
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.project-bottom .project-location {
+  color: var(--muted);
+  font-size: 0.84rem;
+  font-weight: bold;
 }
 
 .project-arrow {
@@ -1121,9 +1125,10 @@ html.pwa-mode #pwa-splash {
   }
   .project {
     min-height: 310px;
+    padding: 18px;
   }
   .project-meta {
-    margin-bottom: 55px;
+    margin-bottom: 28px;
   }
   .footer-inner {
     flex-direction: column;
@@ -1145,6 +1150,14 @@ html.pwa-mode #pwa-splash {
   }
   .copy-label {
     display: none;
+  }
+
+  .fact {
+    flex-direction: column;
+  }
+
+  .fact span {
+    text-align: center;
   }
 }
 
