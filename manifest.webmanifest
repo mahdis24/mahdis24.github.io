@@ -1,7 +1,7 @@
 {
-  "name": "Mahdi Salek - Frontend Developer",
+  "name": "Mahdi Salek - Product-Minded Frontend Developer",
   "short_name": "Mahdi Salek",
-  "description": "Frontend Developer, specializing in Vue.js, Nuxt.js, Vuetify.js & scalable web architectures.",
+  "description": "Product-Minded Frontend Developer specializing in Vue, Nuxt, Vuetify, UX engineering & scalable web architectures.",
   "id": "/",
   "start_url": "/?source=pwa",
   "scope": "/",
@@ -42,7 +42,7 @@
     {
       "name": "Projects",
       "short_name": "Projects",
-      "description": "View my latest frontend projects",
+      "description": "View selected product engineering work",
       "url": "/?source=pwa#projects",
       "icons": [{ "src": "/assets/icons/icon-192x192.png", "sizes": "192x192" }]
     },

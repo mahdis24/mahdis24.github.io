@@ -1,22 +1,22 @@
 # Mahdi Salek
 
-> Mahdi Salek is a Front-End Developer specializing in Vue, Nuxt, Vuetify, TypeScript, and modern web applications. He builds fast, feature-rich applications with an emphasis on clean architecture, SSR, maintainability and production quality.
+> Mahdi Salek is a Product-Minded Front-End Developer specializing in Vue, Nuxt, Vuetify, TypeScript, and modern web applications. He bridges user experience, product logic, and high-performance frontend engineering to build intuitive, scalable web products.
 
 Website: https://mahdis24.tech/
-Role: Front-End Developer
-Focus: Vue and Nuxt ecosystem
+Role: Product-Minded Front-End Developer
+Focus: Vue and Nuxt ecosystem, UX engineering, and resilient architecture
 Status: Open to new opportunities and interesting projects
 
 ## Introduction
 
 Building web products that feel intentional.
 
-Mahdi is a developer focused on the Vue and Nuxt ecosystem. He builds fast, feature-rich applications with an emphasis on clean architecture, SSR, maintainability and production quality.
+Mahdi bridges the gap between user experience, product logic, and high-performance frontend engineering. Specializing in Vue and Nuxt, he builds intuitive dashboards, data-dense interfaces, and resilient web applications that turn complex workflows into effortless user experiences.
 
 ### Core stack
 
 - Vue (https://vuejs.org/): UI framework
-- Nuxt (https://nuxt.com/): Application framework
+- Nuxt (https://nuxt.com/): Application framework with SSR
 - Vuetify (https://vuetifyjs.com/): Component systems
 - TypeScript (https://typescriptlang.org/): Type-safe development
 - Pinia (https://pinia.vuejs.org/): State management
@@ -28,15 +28,15 @@ From complex requirements to clean interfaces.
 
 Product-minded development across dashboards, admin tools, data-heavy views and feature-rich web applications.
 
-Mahdi enjoys turning complex requirements into clean, maintainable interfaces. His day-to-day work covers feature-rich applications, dashboards, admin tools, data-heavy views and everything in between.
+Great frontend engineering isn't just about rendering mockups—it’s about understanding why a feature exists and who it serves. Mahdi's day-to-day work covers data-heavy interfaces, internal tools, and customer-facing products where UX friction directly impacts adoption.
 
-He cares about performance, accessibility and developer experience, from structuring stores and composables sensibly to shipping reliable production builds.
+He cares deeply about edge cases: smooth empty states, optimistic updates, offline resilience, and accessible interactions. Whether architecting scalable state with Pinia or cutting initial load times with Nuxt SSR, his goal is always to deliver speed, clarity, and reliability to the end user.
 
 ### Key facts
 
-- Vue, Nuxt & Vuetify: Primary focus, including SSR
-- Architecture: Clean, scalable and maintainable
-- Production-minded: Tooling, builds and polish
+- Vue & Nuxt Ecosystem: SSR, fast first paint & SEO-ready web products
+- Architecture & Scale: Design systems, composables & clean state trees
+- Product & UX Focus: Accessibility (a11y), responsive UX & resilient error states
 
 Resume (PDF): https://mahdis24.tech/assets/Mahdi_Salek_Front_End_Developer.pdf
 
@@ -48,28 +48,26 @@ A practical stack for shipping real products.
 
 Vue, Nuxt, Vuetify, TypeScript, JavaScript, Pinia, i18n, VueUse, Vue Router
 
-### UI and styling
+### UI, UX & Styling
 
-HTML, CSS, Sass, Tailwind, Responsive design, Material Design Icons, LTR/RTL support, light/dark themes
+Design Systems, Form & Table UX, WCAG a11y, Responsive Design, Tailwind, HTML, CSS, Sass, LTR/RTL support, light/dark themes
 
-### Tooling & Testing
+### Tooling & Quality
 
-Git, GitHub Actions, Docker, Vite, Vitest, npm, bun, ESLint, Prettier
+Git, GitHub Actions, Docker, Vite, Vitest, Core Web Vitals, npm, bun, ESLint, Prettier
 
 ## Projects
 
 Projects with a focus on product quality.
 
 ### IDEX Platform
-
 URL: https://idex.se/
-
+Category: Enterprise SaaS · Safety
 A complete platform for safety, compliance and a safe work environment in industry, construction and the public sector.
 
 ### Procycons
-
 URL: https://procycons.com/
-
+Category: Sustainability Tech · Platform
 Combines digital solutions with ecological sustainability, creating a bridge between technology and environmental protection.
 
 ## Contact
