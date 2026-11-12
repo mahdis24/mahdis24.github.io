@@ -32,7 +32,7 @@ const PRECACHE_ASSETS = [
   '/assets/icons/x.svg',
   '/assets/images/avatar.webp',
   '/assets/images/avatar-appbar.webp',
-  '/assets/Mahdi_Salek_Front_End_Developer.pdf'
+  '/assets/Mahdi_Salek_Front_End_Engineer.pdf'
 ]
 
 self.addEventListener('install', (event) => {
