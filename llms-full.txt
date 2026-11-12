@@ -1,9 +1,9 @@
 # Mahdi Salek
 
-> Mahdi Salek is a Product-Minded Front-End Developer specializing in Vue, Nuxt, Vuetify, TypeScript, and modern web applications. He bridges user experience, product logic, and high-performance frontend engineering to build intuitive, scalable web products.
+> Mahdi Salek is a Senior Product-Minded Front-End Engineer specializing in Vue, Nuxt, Vuetify, TypeScript, and modern web applications. He bridges user experience, product logic, and high-performance frontend engineering to build intuitive, scalable web products.
 
 Website: https://mahdis24.tech/
-Role: Product-Minded Front-End Developer
+Role: Senior Product-Minded Front-End Engineer
 Focus: Vue and Nuxt ecosystem, UX engineering, and resilient architecture
 Status: Open to new opportunities and interesting projects
 
@@ -38,7 +38,7 @@ He cares deeply about edge cases: smooth empty states, optimistic updates, offli
 - Architecture & Scale: Design systems, composables & clean state trees
 - Product & UX Focus: Accessibility (a11y), responsive UX & resilient error states
 
-Resume (PDF): https://mahdis24.tech/assets/Mahdi_Salek_Front_End_Developer.pdf
+Resume (PDF): https://mahdis24.tech/assets/Mahdi_Salek_Front_End_Engineer.pdf
 
 ## Skills
 

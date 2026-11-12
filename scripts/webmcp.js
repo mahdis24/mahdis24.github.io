@@ -10,7 +10,7 @@
 
   const OVERVIEW = {
     name: 'Mahdi Salek',
-    role: 'Product-Minded Front-End Developer',
+    role: 'Senior Product-Minded Front-End Engineer',
     summary:
       'Bridges user experience, product logic, and high-performance frontend engineering. Specializing in Vue & Nuxt, he builds intuitive dashboards, data-dense interfaces, and resilient web applications that turn complex workflows into effortless user experiences.',
     work: 'Dashboards, admin tools, data-heavy views and feature-rich web applications.',
@@ -93,7 +93,7 @@
     skills: '#skills',
     projects: '#projects',
     contact: '#contact',
-    resume: 'assets/Mahdi_Salek_Front_End_Developer.pdf'
+    resume: 'assets/Mahdi_Salek_Front_End_Engineer.pdf'
   }
 
   const reply = (value) => ({
