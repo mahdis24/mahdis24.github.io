@@ -9,4 +9,4 @@ Source code for my personal site, hosted on GitHub Pages at **https://mahdis24.g
 
 ## About
 
-A small portfolio site showcasing my work as a front-end / full-stack developer: projects, skills, and ways to get in touch.
+A small portfolio site showcasing my work as a senior product-minded front-end engineer: projects, skills, and ways to get in touch.
