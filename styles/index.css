@@ -707,7 +707,7 @@ nav {
 
 .projects {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 36px;
 }
 
@@ -755,6 +755,8 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: auto;
+  padding-top: 18px;
 }
 
 .project-bottom .project-location {
@@ -1053,6 +1055,15 @@ html.pwa-mode #pwa-splash {
   }
 }
 
+@media (max-width: 1024px) {
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .projects .project:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+}
+
 @media (max-width: 900px) {
   .hero-grid,
   .about-grid {
@@ -1119,6 +1130,9 @@ html.pwa-mode #pwa-splash {
   .skills-grid,
   .projects {
     grid-template-columns: 1fr;
+  }
+  .projects .project:last-child:nth-child(odd) {
+    grid-column: auto;
   }
   .skill-card {
     min-height: 190px;
