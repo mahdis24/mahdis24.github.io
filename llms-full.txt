@@ -70,6 +70,11 @@ URL: https://procycons.com/
 Category: Sustainability Tech · Platform
 Combines digital solutions with ecological sustainability, creating a bridge between technology and environmental protection.
 
+### iPhone Backup Sync
+URL: https://github.com/mahdis24/iphone-backup-sync
+Category: Open Source · Desktop Utility · AI-Assisted
+A high-reliability Windows desktop utility built to solve iPhone photo and video backup freezes over USB. Explores AI-assisted systems engineering by pairing a reactive Vue 3 and TypeScript interface with a Rust and Tauri v2 streaming backend to communicate directly with Windows Portable Devices (WPD) protocols without cloud subscriptions.
+
 ## Contact
 
 For collaboration, freelance work or a technical conversation, get in touch.
