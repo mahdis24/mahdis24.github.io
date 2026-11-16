@@ -1010,6 +1010,20 @@
         <div class="wrap">
           <div>
             <a
+              href="https://www.producthunt.com/products/iphone-backup-sync?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-iphone-backup-sync"
+              target="_blank"
+              rel="noopener noreferrer">
+              <img
+                id="productHuntBadge"
+                src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1316271&amp;theme=neutral&amp;t=1794815411082"
+                alt="Product Hunt | iphone-backup-sync - Fast, incremental iPhone DCIM backup for Windows via USB"
+                width="292"
+                height="63" />
+            </a>
+          </div>
+
+          <div>
+            <a
               href="https://websitelaunches.com/site/mahdis24.tech"
               target="_blank"
               rel="noopener">
@@ -1047,6 +1061,7 @@
       const mobileMenu = document.getElementById('mobileMenu')
       const mobileBackdrop = document.getElementById('mobileBackdrop')
       const luncherBadge = document.getElementById('luncherBadge')
+      const productHuntBadge = document.getElementById('productHuntBadge')
       const copyBtn = document.getElementById('copyEmailBtn')
       const splash = document.getElementById('pwa-splash')
 
@@ -1133,12 +1148,18 @@
       function changeBadgeTheme() {
         try {
           const luncherBadgeSrc = new URL(luncherBadge.src)
+          const productHuntBadgeSrc = new URL(productHuntBadge.src)
+
           if (document.documentElement.dataset.theme === 'dark') {
             luncherBadgeSrc.searchParams.set('theme', 'dark')
+            productHuntBadgeSrc.searchParams.set('theme', 'dark')
           } else {
             luncherBadgeSrc.searchParams.delete('theme')
+            productHuntBadgeSrc.searchParams.set('theme', 'neutral')
           }
+
           luncherBadge.src = luncherBadgeSrc.toString()
+          productHuntBadge.src = productHuntBadgeSrc.toString()
         } catch {}
       }
 
