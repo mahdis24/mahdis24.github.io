@@ -1,5 +1,3 @@
-/** @format */
-
 // WebMCP tools for https://mahdis24.tech/
 // Include in index.html with: <script src="webmcp.js" defer></script>
 

@@ -1,5 +1,3 @@
-/** @format */
-
 const CACHE_NAME = 'mahdisalek-v4.12'
 const PRECACHE_ASSETS = [
   '/',
