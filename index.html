@@ -995,22 +995,6 @@
         <div class="wrap">
           <div>
             <a
-              href="https://boostdomainrating.com/item/mahdis24.tech?utm_source=badge"
-              target="_blank"
-              rel="noopener noreferrer">
-              <img
-                id="ratingBadge"
-                src="https://boostdomainrating.com/api/badge/mahdis24.tech?color=light&primary=%23089e6a"
-                alt="boostdomainrating - Domain Rating"
-                width="292"
-                height="63"
-                loading="lazy"
-                draggable="false" />
-            </a>
-          </div>
-
-          <div>
-            <a
               href="https://websitelaunches.com/site/mahdis24.tech"
               target="_blank"
               rel="noopener">
@@ -1048,7 +1032,6 @@
       const mobileMenu = document.getElementById('mobileMenu')
       const mobileBackdrop = document.getElementById('mobileBackdrop')
       const luncherBadge = document.getElementById('luncherBadge')
-      const ratingBadge = document.getElementById('ratingBadge')
       const copyBtn = document.getElementById('copyEmailBtn')
       const splash = document.getElementById('pwa-splash')
 
@@ -1135,18 +1118,14 @@
       function changeBadgeTheme() {
         try {
           const luncherBadgeSrc = new URL(luncherBadge.src)
-          const ratingBadgeSrc = new URL(ratingBadge.src)
 
           if (document.documentElement.dataset.theme === 'dark') {
             luncherBadgeSrc.searchParams.set('theme', 'dark')
-            ratingBadgeSrc.searchParams.set('color', 'dark')
           } else {
             luncherBadgeSrc.searchParams.delete('theme')
-            ratingBadgeSrc.searchParams.set('color', 'light')
           }
 
           luncherBadge.src = luncherBadgeSrc.toString()
-          ratingBadge.src = ratingBadgeSrc.toString()
         } catch {}
       }
 
