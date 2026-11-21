@@ -41,7 +41,7 @@ Mahdi Salek builds feature-rich web applications with an emphasis on product thi
 
 - [IDEX Platform](https://idex.se/): A complete platform for safety, compliance and a safe work environment in industry, construction and the public sector
 - [Procycons](https://procycons.com/): Digital solutions combined with ecological sustainability
-- [iPhone Backup Sync](https://github.com/mahdis24/iphone-backup-sync): Open-source, high-reliability Windows desktop application for incremental iPhone photo and video backups, built with Vue 3, TypeScript, Rust, and Tauri v2 (AI-assisted)
+- [iPhone Backup Sync](https://mahdis24.tech/iphone-backup-sync/): Open-source, high-reliability Windows desktop application for incremental iPhone photo and video backups, built with Vue 3, TypeScript, Rust, and Tauri v2 (AI-assisted)
 
 ## Profiles
 
