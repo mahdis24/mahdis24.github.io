@@ -1,4 +1,4 @@
-const CACHE_NAME = 'mahdisalek-v4.14'
+const CACHE_NAME = 'mahdisalek-v4.15'
 const PRECACHE_ASSETS = [
   '/',
   '/?source=pwa',
